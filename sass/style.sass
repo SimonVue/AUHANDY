@@ -1,3 +1,13 @@
+$orangeColor: #FFB619
+$blueColor: #013E99
+
+@mixin colorBorder
+	color: #FFB619
+	border: 2px solid #FFB619
+
+@mixin backgroundBorder
+	background: #FFB619
+	border: 2px solid #FFB619
 
 *
 	box-sizing: border-box
@@ -38,7 +48,7 @@ body
 		cursor: pointer
 		transition: .2s
 		&:hover
-			color: #FFB619
+			color: $orangeColor
 
 .header
 	width: 100%
@@ -66,7 +76,7 @@ body
 				cursor: pointer
 				transition: .2s
 				&:hover
-					color: #FFB619
+					color: $orangeColor
 
 			&__item:last-child
 				margin-left: 25px
@@ -103,7 +113,7 @@ body
 		margin: 0 0 40px 0
 
 	&__btn
-		width: 170px
+		width: 169px
 		height: 50px
 		font-weight: bold
 		font-size: 15px
@@ -113,18 +123,17 @@ body
 		transition: .2s
 		&:hover
 			background: #fff
-			color: #FFB619
+			color: $orangeColor
 			border: 2px solid #fff
 
 	.promo__btn-learn
 		position: relative
-		background: #FFB619
-		border: 1px solid #FFB619
+		background: $orangeColor
+		border: transparent
 		margin-right: 15px
 		&:hover
 			background: #fff
-			color: #FFB619
-			border: 2px solid #fff
+			color: $orangeColor
 
 	&__btn-quote
 		background: none
@@ -177,20 +186,18 @@ body
 			color: #fff
 			font-size: 15px
 			font-weight: bold
-			background: #FFB619
-			border: 3px solid #FFB619
+			@include backgroundBorder
 			margin: 0 auto
 			margin-top: 40px
 			text-transform: uppercase
 			overflow: hidden
 			animation-name: animate
-
 			animation-duration: 0.5s
 			cursor: pointer
 			transition: .2s
 			&:hover
 				background: none
-				color: #FFB619
+				color: $orangeColor
 
 .skill
 	position: relative
@@ -228,8 +235,6 @@ body
 			margin: 0
 
 		.skill__btn
-			background: #FFB619
-			border: 2px solid #FFB619
 			font-weight: bold
 			font-size: 15px
 			line-height: 18px
@@ -239,10 +244,10 @@ body
 			padding: 13px 19px
 			cursor: pointer
 			transition: .2s
+			@include backgroundBorder
 			&:hover
 				background: #fff
-				color: #FFB619
-				border: 2px solid #FFB619
+				@include colorBorder
 
 			i
 				margin-right: 10px
@@ -269,7 +274,7 @@ body
 				display: block
 				width: 60px
 				padding-top: 20px
-				border-bottom: 3px solid #1C3E9B
+				border-bottom: 3px solid $blueColor
 
 		.skill__descr
 			font-size: 15px
@@ -290,7 +295,7 @@ body
 		.skill__icon
 			width: 60px
 			height: 60px
-			background: #1C3E9B
+			background: $blueColor
 			padding: 13px
 			margin-right: 14px
 
@@ -327,7 +332,7 @@ body
 			margin: 0 auto
 			width: 60px
 			padding-top: 20px
-			border-bottom: 3px solid #FFB619
+			border-bottom: 3px solid $orangeColor
 			margin-bottom: 64px
 
 	&__block
@@ -338,12 +343,12 @@ body
 		width: 270px
 		height: 265px
 		background: none
-		border: 4px solid #013E99
+		border: 4px solid $blueColor
 		padding: 52px 19px 49px
 		margin-bottom: 65px
 		transition: .2s
 		&:hover
-			background: #013E99
+			background: $blueColor
 
 	&__link
 		text-decoration: none
@@ -368,15 +373,14 @@ body
 		color: #fff
 		font-size: 15px
 		margin: 0 auto
-		background: #FFB619
-		border: 3px solid #FFB619
+		@include backgroundBorder
 		text-transform: uppercase
 		padding: 16px 37px
 		text-decoration: none
 		transition: .2s
 		&:hover
 			background: none
-			border: 3px solid #FFB619
+			border: 2px solid $orangeColor
 
 .project
 	.wrapper
@@ -397,7 +401,7 @@ body
 			margin: 0 auto
 			width: 60px
 			padding-top: 20px
-			border-bottom: 3px solid #1C3E9B
+			border-bottom: 3px solid $blueColor
 			margin-bottom: 42px
 
 	&__list
@@ -416,7 +420,7 @@ body
 		margin: 0 15px
 		transition: .2s
 		&:hover
-			color: #FFB619
+			color: $orangeColor
 
 	.project__cards
 		display: flex
@@ -460,7 +464,7 @@ body
 				font-weight: bold
 				font-size: 20px
 				text-align: center
-				color: #FFB619
+				color: $orangeColor
 				margin: 0 0 5px 0
 
 			.project__subname
@@ -482,16 +486,14 @@ body
 		color: #fff
 		font-size: 15px
 		margin: 0 auto
-		background: #FFB619
-		border: 3px solid #FFB619
+		@include backgroundBorder
 		text-transform: uppercase
 		padding: 13px 0
 		text-decoration: none
 		transition: .2s
 		&:hover
 			background: none
-			border: 3px solid #FFB619
-			color: #FFB619
+			@include colorBorder
 
 .anyproblem
 	background: url('/img/bg_img.png')center / cover no-repeat
@@ -511,8 +513,6 @@ body
 			margin: 0 0 32px 0
 
 		.anyproblem__btn
-			background: #FFB619
-			border: 2px solid #FFB619
 			font-weight: bold
 			font-size: 15px
 			line-height: 18px
@@ -522,10 +522,11 @@ body
 			padding: 13px 19px
 			cursor: pointer
 			transition: .2s
+			@include backgroundBorder
+
 			&:hover
 				background: #fff
-				color: #FFB619
-				border: 2px solid #FFB619
+				@include colorBorder
 
 			i
 				margin-right: 10px
@@ -551,7 +552,7 @@ body
 			display: block
 			width: 60px
 			padding-top: 20px
-			border-bottom: 3px solid #1C3E9B
+			border-bottom: 3px solid $blueColor
 			margin-bottom: 42px
 
 	&__place
@@ -595,17 +596,15 @@ body
 		color: #fff
 		font-size: 15px
 		font-weight: bold
-		background: #FFB619
-		border: 3px solid #FFB619
 		text-transform: uppercase
 		padding: 13px 0
 		text-decoration: none
 		cursor: pointer
 		transition: .2s
+		@include backgroundBorder
 		&:hover
 			background: none
-			border: 3px solid #FFB619
-			color: #FFB619
+			@include colorBorder
 
 .stamp
 	padding: 55px 0
@@ -651,7 +650,7 @@ body
 			font-size: 22px
 			width: 50px
 			height: 50px
-			color: #FFB619
+			color: $orangeColor
 			background: #252525
 			border-radius: 50%
 			padding: 14px
@@ -677,7 +676,7 @@ body
 		i
 
 			margin-right: 20px
-			color: #FFB619
+			color: $orangeColor
 
 		a
 			font-size: 15px
@@ -686,8 +685,7 @@ body
 			cursor: pointer
 			transition: .2s
 			&:hover
-
-				color: #FFB619
+				color: $orangeColor
 
 	&__coupon
 		width: 370px
@@ -706,7 +704,7 @@ body
 			font-weight: 900
 			font-size: 55px
 			text-transform: uppercase
-			color: #FFB619
+			color: $orangeColor
 			margin: 0 10px 15px
 
 	&__subnumber
@@ -721,7 +719,7 @@ body
 		span
 			font-size: 15px
 			line-height: 24px
-			color: #FFB619
+			color: $orangeColor
 
 	.footer__copyright
 		display: block
@@ -732,4 +730,4 @@ body
 		color: #666
 		margin: 142px 0 0 0
 		span
-			color: #FFB619
+			color: $orangeColor
