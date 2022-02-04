@@ -34,8 +34,9 @@ body {
 }
 
 .supheader .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,6 +47,12 @@ body {
 
 .supheader__text {
   color: #666;
+}
+
+@media (max-width: 424px) {
+  .supheader__text {
+    font-size: 0.75rem;
+  }
 }
 
 .supheader__link {
@@ -61,43 +68,118 @@ body {
   color: #FFB619;
 }
 
+@media (max-width: 424px) {
+  .supheader__link {
+    margin-left: 0.625rem;
+  }
+}
+
 .header {
   width: 100%;
 }
 
 .header .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header .wrapper .nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1.875rem 0;
+  padding: 1.875rem 0;
+}
+
+@media (max-width: 686px) {
+  .header .wrapper .nav .logo {
+    width: 90%;
+  }
 }
 
 .header .wrapper .nav__menu {
   margin-top: 1.125rem;
 }
 
+@media (max-width: 686px) {
+  .header .wrapper .nav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 55vw;
+    height: 100vh;
+    padding: 40px;
+    margin: 0;
+    border: 1px solid #000;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    z-index: 1;
+  }
+}
+
 .header .wrapper .nav__item {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   margin-left: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #333333;
   cursor: pointer;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+  overflow: hidden;
+}
+
+.header .wrapper .nav__item::after {
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  content: ' ';
+  display: block;
+  width: calc(100% - 40%);
+  height: 2px;
+  background: #FFB619;
+  position: absolute;
+  bottom: 0;
+  left: -100%;
 }
 
 .header .wrapper .nav__item:hover {
   color: #FFB619;
+}
+
+.header .wrapper .nav__item:hover::after {
+  left: 0;
+}
+
+@media (max-width: 905px) {
+  .header .wrapper .nav__item {
+    margin-left: 1.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 686px) {
+  .header .wrapper .nav__item {
+    font-size: 0.75rem;
+    line-height: 1.8125rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 686px) {
+  .header .wrapper .nav__item {
+    display: none;
+  }
 }
 
 .header .wrapper .nav__item:last-child {
@@ -110,8 +192,9 @@ body {
 }
 
 .promo .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .promo .promo__wrapper {
@@ -134,7 +217,7 @@ body {
 
 .promo__title {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.4375rem;
   margin: 0 0 1.25rem 0;
 }
 
@@ -280,8 +363,9 @@ body {
 }
 
 .skill .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .skill .skill__sup-wrapper {
@@ -299,8 +383,9 @@ body {
 }
 
 .skill .skill__sup-wrapper .skill__sup-info {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   height: 10rem;
 }
 
@@ -348,8 +433,9 @@ body {
 }
 
 .skill .skill__wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,8 +520,9 @@ body {
 }
 
 .services .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   text-align: center;
   color: #fff;
 }
@@ -522,8 +609,9 @@ body {
 }
 
 .project .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   padding: 5rem 0 8.5625rem;
 }
 
@@ -688,8 +776,9 @@ body {
 }
 
 .anyproblem .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .anyproblem .wrapper .anyproblem__title {
@@ -732,8 +821,9 @@ body {
 }
 
 .location .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,8 +928,9 @@ body {
 }
 
 .stamp .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -853,8 +944,9 @@ body {
 }
 
 .footer .wrapper {
-  width: 73.125rem;
+  max-width: 73.125rem;
   margin: 0 auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
