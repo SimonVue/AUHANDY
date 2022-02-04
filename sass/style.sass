@@ -30,13 +30,18 @@ body
 	&__text
 		color: #666
 
+		@media ( max-width:	424px)
+			font-size: rem(12)
+
 	&__link
-		margin-left: rem(20);
+		margin-left: rem(20)
 		color: #666
 		cursor: pointer
 		transition: .2s
 		&:hover
 			color: $orangeColor
+		@media ( max-width:	424px)
+			margin-left: rem(10)
 
 .header
 	width: 100%
@@ -45,23 +50,68 @@ body
 		@include wrapPosition
 
 		.nav
+			position: relative
 			display: flex
 			justify-content: space-between
-			margin: rem(30) 0
+			padding: rem(30) 0
+
+			.logo
+				@media ( max-width:	686px)
+					width: 90%
 
 			&__menu
 				margin-top: rem(18);
+				@media ( max-width:	686px)
+					display: flex
+					flex-direction: column
+					width: 55vw
+					height: 100vh
+					padding: 40px
+					margin: 0
+					border: 1px solid #000
+					background: #fff
+					position: absolute
+					top: 0
+					right: -15px
+					z-index: 1
 
 			&__item
+				position: relative
+				display: inline-block
 				text-decoration: none
 				margin-left: rem(40);
 				font-weight: bold
 				text-transform: uppercase
 				color: #333333
 				cursor: pointer
-				transition: .2s
+				overflow: hidden
+
+				&::after
+					transition: all 0.4s ease-out
+					content: ' '
+					display: block
+					width: calc(100% - 40% )
+					height: 2px
+					background: $orangeColor
+					position: absolute
+					bottom: 0
+					left: -100%
+
 				&:hover
 					color: $orangeColor
+					&::after
+						left: 0
+
+				@media ( max-width:	905px)
+					margin-left: rem(20)
+					font-size: rem(12)
+				@media ( max-width:	686px)
+					font-size: rem(12)
+					line-height: rem(29)
+					margin: 0
+
+				@media (max-width: 686px)
+					display: none
 
 			&__item:last-child
 				margin-left: rem(25)
@@ -86,7 +136,7 @@ body
 
 	&__title
 		font-weight: bold
-		font-size: rem(40)
+		font-size: rem(39)
 		margin: 0 0 rem(20) 0
 
 	&__text
