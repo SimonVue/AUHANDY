@@ -1,16 +1,9 @@
-$orangeColor: #FFB619
-$blueColor: #013E99
-
-@mixin colorBorder
-	color: #FFB619
-	border: 2px solid #FFB619
-
-@mixin backgroundBorder
-	background: #FFB619
-	border: 2px solid #FFB619
+@import mixin.sass
 
 *
 	box-sizing: border-box
+	margin: 0
+	padding: 0
 
 html
 	scroll-behavior: smooth
@@ -18,32 +11,27 @@ html
 body
 	display: flex
 	flex-direction: column
-	margin: 0
-	padding: 0
 	font-family: 'Lato', sans-serif
+	font-size: rem(16)
+	line-height: rem(24)
 
 .content
 	flex-grow: 1
 
 .supheader
-
 	background: #F2F2F2
-	padding: 14px 0
+	padding: rem(14) 0
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		display: flex
 		justify-content: space-between
 
 	&__text
-		font-size: 15px
-		line-height: 22px
 		color: #666
-		margin: 0
 
 	&__link
-		margin-left: 20px
+		margin-left: rem(20);
 		color: #666
 		cursor: pointer
 		transition: .2s
@@ -54,23 +42,20 @@ body
 	width: 100%
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 
 		.nav
 			display: flex
 			justify-content: space-between
-			margin: 30px 0
+			margin: rem(30) 0
 
 			&__menu
-				margin-top: 18px
+				margin-top: rem(18);
 
 			&__item
 				text-decoration: none
-				margin-left: 40px
+				margin-left: rem(40);
 				font-weight: bold
-				font-size: 16px
-				line-height: 22px
 				text-transform: uppercase
 				color: #333333
 				cursor: pointer
@@ -79,44 +64,41 @@ body
 					color: $orangeColor
 
 			&__item:last-child
-				margin-left: 25px
+				margin-left: rem(25)
 
 .promo
 	background: url('/img/bg_img.png')center / cover no-repeat
-	padding: 118px 0 132px
+	padding: rem(118) 0 rem(132)
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 
 	.promo__wrapper
 		display: flex
 		justify-content: space-between
 
 	&__img
-		margin: 0 68px 0 50px
+		margin: 0 rem(68) 0 rem(50)
 
 	.promo__block
-
 		color: #fff
-		margin-top: 77px
+		margin-top: rem(77)
 
 	&__title
 		font-weight: bold
-		font-size: 40px
-		margin: 0 0 20px 0
+		font-size: rem(40)
+		margin: 0 0 rem(20) 0
 
 	&__text
-		font-size: 18px
-		line-height: 28px
+		font-size: rem(18);
+		line-height: rem(28)
 		color: #ccc
-		margin: 0 0 40px 0
+		margin: 0 0 rem(40) 0
 
 	&__btn
-		width: 169px
-		height: 50px
+		width: rem(169)
+		height: rem(50)
 		font-weight: bold
-		font-size: 15px
 		text-transform: uppercase
 		color: #FFFFFF
 		cursor: pointer
@@ -130,7 +112,8 @@ body
 		position: relative
 		background: $orangeColor
 		border: transparent
-		margin-right: 15px
+		margin-right: rem(15)
+
 		&:hover
 			background: #fff
 			color: $orangeColor
@@ -145,13 +128,13 @@ body
 		top: 60%
 		transform: translate(-50%, -50%)
 		display: none
-		width: 370px
-		height: 400px
+		width: rem(370)
+		height: rem(400)
 		border: none
 		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 		background: #efefef
 		text-align: center
-		padding-top: 50px
+		padding-top: rem(50)
 		opacity: 1
 		animation-name: animatetop
 		animation-duration: 0.4s
@@ -166,29 +149,28 @@ body
 
 		.form-close
 			position: absolute
-			top: 10px
-			right: 15px
+			top: rem(10)
+			right: rem(15)
 			color: #000
 			cursor: pointer
 
 		.form__input
-			width: 270px
-			height: 50px
-			padding: 20px
+			width: rem(270)
+			height: rem(50)
+			padding: rem(20)
 			border: none
-			margin-top: 15px
+			margin-top: rem(15)
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
 		.form__btn
 			display: block
-			width: 131px
-			height: 50px
+			width: rem(131)
+			height: rem(50)
 			color: #fff
-			font-size: 15px
 			font-weight: bold
 			@include backgroundBorder
 			margin: 0 auto
-			margin-top: 40px
+			margin-top: rem(40)
 			text-transform: uppercase
 			overflow: hidden
 			animation-name: animate
@@ -199,49 +181,50 @@ body
 				background: none
 				color: $orangeColor
 
+.error
+	outline: 2px solid #f5a783 !important
+	border-radius: 3px
+
 .skill
 	position: relative
 
 	.wrapper
-		width: 1170px
+		@include wrapPosition
 
 	.skill__sup-wrapper
 		margin: 0 auto
 		display: flex
 		justify-content: space-between
-		padding: 69px 0
+		padding: rem(69) 0
 		align-items: center
 
 		.skill__sup-info
-
-			width: 1170px
-			height: 160px
-			margin: 0
+			@include wrapPosition
+			height: rem(160)
 
 		.skill__bg
 			position: absolute
 			top: 0
 			left: 0
 			width: 100%
-			height: 190px
+			height: rem(190)
 			background: url('/img/skill-bg.png')center / cover no-repeat
 			z-index: -1
 
 		.skill__sup-text
 			font-weight: bold
-			font-size: 24px
-			line-height: 22px
+			font-size: rem(24)
+			line-height: rem(22)
 			color: #333333
 			margin: 0
 
 		.skill__btn
 			font-weight: bold
-			font-size: 15px
-			line-height: 18px
+			line-height: rem(18)
 			text-transform: uppercase
 			text-decoration: none
 			color: #fff
-			padding: 13px 19px
+			padding: rem(13) rem(19)
 			cursor: pointer
 			transition: .2s
 			@include backgroundBorder
@@ -250,37 +233,35 @@ body
 				@include colorBorder
 
 			i
-				margin-right: 10px
+				margin-right: rem(10)
 
 	.skill__wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		display: flex
 		justify-content: space-between
-		padding: 80px 0 120px
+		padding: rem(80) 0 rem(120)
 		align-items: center
 
 		.skill__img
-			margin-right: 67px
+			margin-right: rem(67)
 
 		.skill__topic
 			font-weight: 900
-			font-size: 30px
+			font-size: rem(30)
+
 			text-transform: uppercase
 			color: #333333
-			margin: 44px 0 19px 0
+			margin: rem(44) 0 rem(19) 0
 			&::after
 				content: ""
 				display: block
-				width: 60px
-				padding-top: 20px
+				width: rem(60)
+				padding-top: rem(20)
 				border-bottom: 3px solid $blueColor
 
 		.skill__descr
-			font-size: 15px
-			line-height: 24px
 			color: #666
-			margin: 0 0 39px 0
+			margin: 0 0 rem(39) 0
 
 		.skill__items
 			display: flex
@@ -290,62 +271,60 @@ body
 		.skill__item
 			display: flex
 			justify-content: space-between
-			width: 305px
+			width: rem(305)
 
 		.skill__icon
-			width: 60px
-			height: 60px
+			width: rem(60)
+			height: rem(60)
+
 			background: $blueColor
-			padding: 13px
-			margin-right: 14px
+			padding: rem(13)
+			margin-right: rem(14)
 
 		.skill__title
 			font-weight: bold
-			font-size: 18px
+			font-size: rem(18)
 			color: #333
-			margin: 0 0 9px 0
+			margin: 0 0 rem(9) 0
 
 		.skill__text
-			font-size: 15px
-			line-height: 24px
 			color: #666
-			margin: 0 0 45px 0
+			margin: 0 0 rem(45) 0
 
 .services
 	background: url(/img/bg_img.png)
-	padding: 80px 0 100px
+	padding: rem(80) 0 rem(100)
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		text-align: center
 		color: #fff
 
 	&__title
 		font-weight: 900
-		font-size: 30px
+		font-size: rem(30)
 		text-transform: uppercase
 		margin: 0
 		&::after
 			content: ""
 			display: block
 			margin: 0 auto
-			width: 60px
-			padding-top: 20px
+			width: rem(60)
+			padding-top: rem(20)
 			border-bottom: 3px solid $orangeColor
-			margin-bottom: 64px
+			margin-bottom: rem(64)
 
 	&__block
 		display: flex
 		justify-content: space-between
 
 	&__proff
-		width: 270px
-		height: 265px
+		width: rem(270)
+		height: rem(265)
 		background: none
 		border: 4px solid $blueColor
-		padding: 52px 19px 49px
-		margin-bottom: 65px
+		padding: rem(52) rem(19) rem(49)
+		margin-bottom: rem(65)
 		transition: .2s
 		&:hover
 			background: $blueColor
@@ -354,28 +333,25 @@ body
 		text-decoration: none
 
 	&__icon
-		margin-bottom: 27px
+		margin-bottom: rem(27)
 
 	&__name
 		font-weight: bold
-		font-size: 24px
+		font-size: rem(24)
 		margin: 0
-		margin-bottom: 13px
+		margin-bottom: rem(13)
 		color: #fff
 
 	&__text
-		font-size: 15px
-		line-height: 24px
 		color: #CCC
 
 	&__btn
 		display: inline-block
 		color: #fff
-		font-size: 15px
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
-		padding: 16px 37px
+		padding: rem(16) rem(37)
 		text-decoration: none
 		transition: .2s
 		&:hover
@@ -384,13 +360,12 @@ body
 
 .project
 	.wrapper
-		width: 1170px
-		margin: 0 auto
-		padding: 80px 0 137px
+		@include wrapPosition
+		padding: rem(80) 0 rem(137)
 
 	&__title
 		font-weight: 900
-		font-size: 30px
+		font-size: rem(30)
 		text-align: center
 		color: #333
 		text-transform: uppercase
@@ -399,25 +374,24 @@ body
 			content: ""
 			display: block
 			margin: 0 auto
-			width: 60px
-			padding-top: 20px
+			width: rem(60)
+			padding-top: rem(20)
 			border-bottom: 3px solid $blueColor
-			margin-bottom: 42px
+			margin-bottom: rem(42);
 
 	&__list
 		display: flex
 		justify-content: center
 		list-style: none
 		text-transform: uppercase
-		margin: 0 0 34px 0
+		margin: 0 0 rem(34) 0
 		padding: 0
 
 	&__link
 		font-weight: bold
-		font-size: 15px
 		color: #666
 		text-decoration: none
-		margin: 0 15px
+		margin: 0 rem(15)
 		transition: .2s
 		&:hover
 			color: $orangeColor
@@ -425,7 +399,7 @@ body
 	.project__cards
 		display: flex
 		flex-wrap: wrap
-		margin-bottom: 65px
+		margin-bottom: rem(65)
 
 	.project__picture-1
 		background: url('/img/project_jmg-1.png')center / cover no-repeat
@@ -442,8 +416,8 @@ body
 
 	.project__picture
 		position: relative
-		width: 390px
-		height: 292px
+		width: rem(390)
+		height: rem(292)
 		&:hover .project__overlay
 			opacity: 1
 
@@ -452,8 +426,8 @@ body
 			top: 0
 			left: 0
 			right: 0
-			height: 292px
-			padding: 109px 0 99px
+			height: rem(292)
+			padding: rem(109) 0 rem(99)
 			justify-content: center
 			align-items: center
 			background: linear-gradient(0deg, rgba(28, 62, 155, 0.8), rgba(28, 62, 155, 0.8))
@@ -462,16 +436,15 @@ body
 
 			.project__name
 				font-weight: bold
-				font-size: 20px
+				font-size: rem(20)
 				text-align: center
 				color: $orangeColor
-				margin: 0 0 5px 0
+				margin: 0 0 rem(5) 0
 
 			.project__subname
-				font-size: 15px
 				text-align: center
 				color: #CCC
-				margin: 0 0 17px 0
+				margin: 0 0 rem(17) 0
 
 			i
 				display: block
@@ -481,14 +454,13 @@ body
 	.project__btn
 		text-align: center
 		display: block
-		width: 170px
-		height: 50px
+		width: rem(170)
+		height: rem(50)
 		color: #fff
-		font-size: 15px
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
-		padding: 13px 0
+		padding: rem(13) 0
 		text-decoration: none
 		transition: .2s
 		&:hover
@@ -497,29 +469,28 @@ body
 
 .anyproblem
 	background: url('/img/bg_img.png')center / cover no-repeat
-	padding: 176px 0 218px
+	padding: rem(176) 0 rem(218)
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 
 		.anyproblem__title
-			width: 504px
+			width: rem(504)
+
 			font-weight: bold
-			font-size: 36px
-			line-height: 52px
+			font-size: rem(36)
+			line-height: rem(52)
 			color: #fff
 			text-transform: uppercase
-			margin: 0 0 32px 0
+			margin: 0 0 rem(32) 0
 
 		.anyproblem__btn
 			font-weight: bold
-			font-size: 15px
-			line-height: 18px
+			line-height: rem(18)
 			text-transform: uppercase
 			text-decoration: none
 			color: #fff
-			padding: 13px 19px
+			padding: rem(13) rem(19)
 			cursor: pointer
 			transition: .2s
 			@include backgroundBorder
@@ -529,34 +500,33 @@ body
 				@include colorBorder
 
 			i
-				margin-right: 10px
+				margin-right: rem(10)
 
 .location
 	background: url('/img/skill-bg.png')center / cover no-repeat
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		display: flex
 		justify-content: space-between
-		padding: 80px 0 98px
+		padding: rem(80) 0 rem(98)
 
 	&__title
 		font-weight: 900
-		font-size: 30px
+		font-size: rem(30)
 		text-transform: uppercase
-		margin: 0 0 55px 0
+		margin: 0 0 rem(55) 0
 		color: #333
 		&::after
 			content: ""
 			display: block
-			width: 60px
-			padding-top: 20px
+			width: rem(60)
+			padding-top: rem(20)
 			border-bottom: 3px solid $blueColor
-			margin-bottom: 42px
+			margin-bottom: rem(42)
 
 	&__place
-		margin-right: 61px
+		margin-right: rem(61)
 		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
 	&__form
@@ -565,12 +535,11 @@ body
 		flex-wrap: wrap
 
 	&__input
-		width: 310px
-		height: 50px
+		width: rem(310)
+		height: rem(50)
 		margin-bottom: 20px
-		padding: 0 22px
+		padding: 0 rem(22)
 		border: none
-		font-size: 15px
 		color: #666
 		&:hover
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
@@ -579,25 +548,24 @@ body
 			border: 3px solid #d7fbdf
 
 	&__area
-		width: 637px
-		height: 127px
-		margin-bottom: 35px
-		padding: 13px 22px
+		width: rem(637)
+		height: rem(127)
+		margin-bottom: rem(35)
+		padding: rem(13) rem(22)
 		border: none
 		font-family: 'Lato', sans-serif
-		font-size: 15px
+		font-size: rem(16)
 		color: #666
 		&:hover
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
 	&__btn
-		width: 131px
-		height: 50px
+		width: rem(131)
+		height: rem(50)
 		color: #fff
-		font-size: 15px
 		font-weight: bold
 		text-transform: uppercase
-		padding: 13px 0
+		padding: rem(13) 0
 		text-decoration: none
 		cursor: pointer
 		transition: .2s
@@ -607,38 +575,35 @@ body
 			@include colorBorder
 
 .stamp
-	padding: 55px 0
+	padding: rem(55) 0
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		display: flex
 		justify-content: space-around
 
 .footer
 	background: #1A1A1A
-	padding: 57px 0 0 0
+	padding-top: rem(57)
 
 	.wrapper
-		width: 1170px
-		margin: 0 auto
+		@include wrapPosition
 		display: flex
 		justify-content: space-between
 
 	&__title
 		font-weight: bold
-		font-size: 18px
+		font-size: rem(18)
 		text-transform: uppercase
 		color: #CCC
-		margin: 0 0 32px 0
+		margin: 0 0 rem(32) 0
 
 	ul
 		padding: 0
 		margin: 0
 
 	li
-		font-size: 15px
-		line-height: 22px
+		line-height: rem(22)
 		color: #999
 		list-style: none
 
@@ -647,15 +612,15 @@ body
 
 		i
 			text-align: center
-			font-size: 22px
-			width: 50px
-			height: 50px
+			font-size: rem(22)
+			width: rem(50)
+			height: rem(50)
 			color: $orangeColor
 			background: #252525
 			border-radius: 50%
-			padding: 14px
-			margin-right: 15px
-			margin-bottom: 10px
+			padding: rem(14)
+			margin-right: rem(15)
+			margin-bottom: rem(10)
 
 	&__info-phone
 		display: flex
@@ -668,18 +633,17 @@ body
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		width: 346px
-		height: 284px
+		width: rem(346)
+		height: rem(380)
 
 	.footer__link
-		margin-bottom: 15px
-		i
+		margin-bottom: rem(15)
 
-			margin-right: 20px
+		i
+			margin-right: rem(20)
 			color: $orangeColor
 
 		a
-			font-size: 15px
 			color: #999
 			text-decoration: none
 			cursor: pointer
@@ -688,46 +652,42 @@ body
 				color: $orangeColor
 
 	&__coupon
-		width: 370px
-		height: 220px
-		border: 1px dashed #404040
+		width: rem(370)
+		height: rem(220)
+		border: 2px dashed #404040
 		text-align: center
 
 	&__number
 		font-weight: bold
-		font-size: 15px
-		line-height: 22px
 		color: #CCC
 		text-transform: uppercase
-		margin-top: 35px
+		margin-top: rem(35)
+
 		span
 			font-weight: 900
-			font-size: 55px
+			font-size: rem(55)
 			text-transform: uppercase
 			color: $orangeColor
-			margin: 0 10px 15px
+			margin: rem(10) rem(15)
 
 	&__subnumber
 		font-weight: bold
-		font-size: 18px
+		font-size: rem(18)
 		color: #CCC
-		margin-bottom: 50px
+		margin-bottom: rem(50)
 
 	&__code
-		font-size: 15px
 		color: #CCC
 		span
-			font-size: 15px
-			line-height: 24px
 			color: $orangeColor
 
-	.footer__copyright
-		display: block
-		padding: 19px 0
-		background: #0D0D0D
-		text-align: center
-		font-size: 15px
-		color: #666
-		margin: 142px 0 0 0
-		span
-			color: $orangeColor
+.footer__copyright
+	display: block
+	padding: rem(19) 0
+	background: #0D0D0D
+	text-align: center
+	color: #666
+	margin: 0
+
+	span
+		color: $orangeColor
