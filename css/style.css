@@ -278,7 +278,7 @@ body {
 }
 
 .promo {
-  background: url("/img/bg_img.jpeg") center/cover no-repeat;
+  background: url("../img/bg_img.jpeg") center/cover no-repeat;
   padding: 7.375rem 0;
 }
 
