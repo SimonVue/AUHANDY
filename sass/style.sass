@@ -53,72 +53,144 @@ body
 			position: relative
 			display: flex
 			justify-content: space-between
-			padding: rem(30) 0
+			padding: rem(10) 0
+			align-items: center
 
 			.logo
 				@media ( max-width:	686px)
 					width: 90%
+					vertical-align: bottom
 
 			&__menu
-				margin-top: rem(18);
 				@media ( max-width:	686px)
 					display: flex
 					flex-direction: column
-					width: 55vw
-					height: 100vh
-					padding: 40px
+					width: 100%
+					height: 100%
+					padding: rem(12) rem(24)
+					padding-top: rem(65)
 					margin: 0
-					border: 1px solid #000
-					background: #fff
-					position: absolute
+					border: none
+					background: #1b1922f2
+					transition: .2s
+					position: fixed
 					top: 0
-					right: -15px
+					right: 0
+					overflow: auto
 					z-index: 1
 
-			&__item
-				position: relative
-				display: inline-block
-				text-decoration: none
-				margin-left: rem(40);
-				font-weight: bold
-				text-transform: uppercase
-				color: #333333
-				cursor: pointer
-				overflow: hidden
+				&_item
+					position: relative
+					display: inline-block
+					text-decoration: none
+					margin-left: rem(40)
+					color: #333
+					padding-bottom: 3px
+					font-weight: bold
+					text-transform: uppercase
+					cursor: pointer
+					overflow: hidden
 
-				&::after
-					transition: all 0.4s ease-out
-					content: ' '
-					display: block
-					width: calc(100% - 40% )
-					height: 2px
-					background: $orangeColor
-					position: absolute
-					bottom: 0
-					left: -100%
-
-				&:hover
-					color: $orangeColor
 					&::after
-						left: 0
+						transition: all 0.4s ease-out
+						content: ' '
+						display: block
+						width: 100%
+						height: 2px
+						background: $orangeColor
+						position: absolute
+						bottom: 0
+						left: -100%
+						@media(max-width: 686px)
+							width: calc(100% - 50% )
 
-				@media ( max-width:	905px)
-					margin-left: rem(20)
-					font-size: rem(12)
-				@media ( max-width:	686px)
-					font-size: rem(12)
-					line-height: rem(29)
-					margin: 0
+					&:hover
+						color: $orangeColor
+						&::after
+							left: 0
+
+					@media ( max-width:	905px)
+						margin-left: rem(20)
+						font-size: rem(12)
+					@media ( max-width:	686px)
+						color: #ddd
+						font-size: rem(18)
+						letter-spacing: 1.8px
+						line-height: rem(45)
+						margin: 0
+
+				&_item:last-child
+					margin-left: rem(25)
 
 				@media (max-width: 686px)
-					display: none
+					top: 0
+					right: -100%
 
-			&__item:last-child
-				margin-left: rem(25)
+			._open
+				right: 0
+
+._lock
+	overflow: hidden
+
+// ======================= Burger ============================
+.menu-burger
+	display: none
+
+	@media(max-width: 686px)
+		display: block
+		position: relative
+		width: rem(30)
+		height: rem(18)
+		cursor: pointer
+		z-index: 1
+
+	span,
+	&::before,
+	&::after
+		left: 0
+		position: absolute
+		height: 3px
+		width: 100%
+		transition: all 0.3s ease 0s
+		background: #333333
+
+	&::before,
+	&::after
+		content: ""
+
+	&::before
+		top: 0
+
+	&::after
+		bottom: 0
+
+	span
+		top: 50%
+		transform: scale(1) translate(0px, -50%)
+
+._close
+
+	span
+		background: #ddd
+		transform: scale(0) translate(0px, -50%)
+
+	&::before
+		background: #ddd
+		top: 50%
+		transform: rotate(-45deg) translate(0px, -50%)
+
+	&::after
+		background: #ddd
+		top: 50%
+		transform: rotate(45deg) translate(0px, 50%)
 
 .promo
-	background: url('/img/bg_img.png')center / cover no-repeat
-	padding: rem(118) 0 rem(132)
+	background: url('/img/bg_img.jpeg')center / cover no-repeat
+	padding: rem(118) 0
+	@media(max-width: 720px)
+		padding: rem(59) 0
+	@media(max-width: 430px)
+		padding: rem(39) 0
 
 	.wrapper
 		@include wrapPosition
@@ -126,26 +198,44 @@ body
 	.promo__wrapper
 		display: flex
 		justify-content: space-between
+		align-items: center
+		gap: rem(50)
+
+		@media(max-width: 720px)
+			display: block
+			text-align: center
+			width: 90%
+		@media(max-width: 430px)
+			width: 100%
 
 	&__img
-		margin: 0 rem(68) 0 rem(50)
+		width: 40%
+		height: 100%
 
 	.promo__block
 		color: #fff
-		margin-top: rem(77)
+		@media(max-width: 490px)
+			margin: 0 auto
 
 	&__title
 		font-weight: bold
 		font-size: rem(39)
+		line-height: 50px
+		letter-spacing: 2px
 		margin: 0 0 rem(20) 0
+		@media(max-width: 1030px)
+			font-size: rem(35)
+			@media(max-width: 430px)
+				font-size: rem(30)
 
 	&__text
-		font-size: rem(18);
+		font-size: rem(18)
 		line-height: rem(28)
 		color: #ccc
 		margin: 0 0 rem(40) 0
 
 	&__btn
+		display: inline-block
 		width: rem(169)
 		height: rem(50)
 		font-weight: bold
@@ -157,12 +247,21 @@ body
 			background: #fff
 			color: $orangeColor
 			border: 2px solid #fff
+		@media(max-width: 490px)
+			display: block
+			margin: 0 auto
 
-	.promo__btn-learn
+	&__btn-learn
 		position: relative
 		background: $orangeColor
 		border: transparent
 		margin-right: rem(15)
+
+		@media(max-width: 490px)
+			display: block
+			margin: 0 auto
+
+			margin-bottom: rem(15)
 
 		&:hover
 			background: #fff
@@ -188,6 +287,8 @@ body
 		opacity: 1
 		animation-name: animatetop
 		animation-duration: 0.4s
+		@media(max-width: 360px)
+			width: 100%
 
 		@keyframes "animatetop"
 			from
@@ -211,6 +312,8 @@ body
 			border: none
 			margin-top: rem(15)
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+			@media(max-width: 360px)
+				width: 75%
 
 		.form__btn
 			display: block

@@ -6,14 +6,26 @@ const btn = document.getElementById('learn');
 const span = document.getElementsByClassName('form-close')[0];
 
 btn.onclick = function () {
+  document.body.classList.toggle('_lock');
   modal.style.display = "block";
 }
 span.onclick = function () {
   modal.style.display = "none";
 }
 
-/* ========================= validation ======================== */
+/* ========================= Burger ======================== */
+document.querySelector('.menu-burger').onclick = function () {
+  open()
+};
 
+function open() {
+  document.body.classList.toggle('_lock');
+  document.getElementById('nav-menu').classList.toggle('_open');
+  document.querySelector('.menu-burger').classList.toggle('_close');
+
+}
+
+/* ========================= validation ======================== */
 function validation() {
   const formElem = document.querySelector('#form');
   console.log(formElem);
