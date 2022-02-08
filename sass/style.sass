@@ -348,21 +348,29 @@ body
 		margin: 0 auto
 		display: flex
 		justify-content: space-between
-		padding: rem(69) 0
+		padding: rem(50) rem(15)
 		align-items: center
+		@media(max-width: 720px)
+			padding: rem(26) rem(15)
+			@media(max-width: 535px)
+				flex-direction: column
 
-		.skill__sup-info
+		&__sup-info
 			@include wrapPosition
-			height: rem(160)
+			height: rem(100)
 
 		.skill__bg
 			position: absolute
 			top: 0
 			left: 0
 			width: 100%
-			height: rem(190)
-			background: url('/img/skill-bg.png')center / cover no-repeat
+			height: rem(150)
+			background: url('../img/skill-bg.png')center / cover no-repeat
 			z-index: -1
+			@media(max-width: 720px)
+				height: rem(100)
+			@media(max-width: 535px)
+				height: rem(140)
 
 		.skill__sup-text
 			font-weight: bold
@@ -370,6 +378,10 @@ body
 			line-height: rem(22)
 			color: #333333
 			margin: 0
+			@media(max-width: 720px)
+				font-size: rem(14)
+			@media(max-width: 535px)
+				margin-bottom: rem(15)
 
 		.skill__btn
 			font-weight: bold
@@ -381,6 +393,10 @@ body
 			cursor: pointer
 			transition: .2s
 			@include backgroundBorder
+			@media(max-width: 720px)
+				font-size: rem(14)
+			@media(max-width: 535px)
+				padding: rem(13) rem(12)
 			&:hover
 				background: #fff
 				@include colorBorder
@@ -392,7 +408,7 @@ body
 		@include wrapPosition
 		display: flex
 		justify-content: space-between
-		padding: rem(80) 0 rem(120)
+		padding: rem(80) rem(15)rem(120)
 		align-items: center
 
 		.skill__img
@@ -445,7 +461,7 @@ body
 			margin: 0 0 rem(45) 0
 
 .services
-	background: url(/img/bg_img.png)
+	background: url(../img/bg_img.png)
 	padding: rem(80) 0 rem(100)
 
 	.wrapper
@@ -555,17 +571,17 @@ body
 		margin-bottom: rem(65)
 
 	.project__picture-1
-		background: url('/img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-1.png')center / cover no-repeat
 	.project__picture-2
-		background: url('/img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-3.png')center / cover no-repeat
 	.project__picture-3
-		background: url('/img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-2.png')center / cover no-repeat
 	.project__picture-4
-		background: url('/img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-2.png')center / cover no-repeat
 	.project__picture-5
-		background: url('/img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-1.png')center / cover no-repeat
 	.project__picture-6
-		background: url('/img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-3.png')center / cover no-repeat
 
 	.project__picture
 		position: relative
@@ -621,7 +637,7 @@ body
 			@include colorBorder
 
 .anyproblem
-	background: url('/img/bg_img.png')center / cover no-repeat
+	background: url('../img/bg_img.png')center / cover no-repeat
 	padding: rem(176) 0 rem(218)
 
 	.wrapper
@@ -656,7 +672,7 @@ body
 				margin-right: rem(10)
 
 .location
-	background: url('/img/skill-bg.png')center / cover no-repeat
+	background: url('../img/skill-bg.png')center / cover no-repeat
 
 	.wrapper
 		@include wrapPosition
