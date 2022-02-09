@@ -656,23 +656,27 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
+  padding: 50px 15px;
+}
+
+.skill .skill__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5rem 0.9375rem 7.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.skill .skill__wrapper .skill__img {
-  margin-right: 4.1875rem;
+.skill .skill__info .skill__img {
+  width: calc(150px + (500 - 265) * ((100vw - 320px) / (1170 - 320)));
 }
 
-.skill .skill__wrapper .skill__topic {
+.skill .skill__topic {
+  position: relative;
   font-weight: 900;
   font-size: 1.875rem;
   text-transform: uppercase;
@@ -680,7 +684,7 @@ body {
   margin: 2.75rem 0 1.1875rem 0;
 }
 
-.skill .skill__wrapper .skill__topic::after {
+.skill .skill__topic::after {
   content: "";
   display: block;
   width: 3.75rem;
@@ -688,15 +692,17 @@ body {
   border-bottom: 3px solid #013E99;
 }
 
-.skill .skill__wrapper .skill__descr {
+.skill .skill__descr {
   color: #666;
   margin: 0 0 2.4375rem 0;
 }
 
-.skill .skill__wrapper .skill__items {
+.skill .skill__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: calc(15px + (20 - 15) * ((100vw - 320px) / (1170 - 320)));
+  margin-left: 25px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -704,34 +710,35 @@ body {
       flex-wrap: wrap;
 }
 
-.skill .skill__wrapper .skill__item {
+.skill .skill__item {
+  padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1170 - 320)));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 19.0625rem;
+  width: 50%;
 }
 
-.skill .skill__wrapper .skill__icon {
-  width: 3.75rem;
-  height: 3.75rem;
+.skill .skill__icon {
+  height: calc(30px + (60 - 30) * ((100vw - 320px) / (1170 - 320)));
+  width: 40%;
   background: #013E99;
   padding: 0.8125rem;
   margin-right: 0.875rem;
 }
 
-.skill .skill__wrapper .skill__title {
+.skill .skill__title {
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1170 - 320)));
   font-weight: bold;
-  font-size: 1.125rem;
   color: #333;
-  margin: 0 0 0.5625rem 0;
 }
 
-.skill .skill__wrapper .skill__text {
+.skill .skill__text {
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)));
+  line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)));
   color: #666;
-  margin: 0 0 2.8125rem 0;
 }
 
 .services {

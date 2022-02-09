@@ -11,6 +11,7 @@ html
 body
 	display: flex
 	flex-direction: column
+
 	font-family: 'Lato', sans-serif
 	font-size: rem(16)
 	line-height: rem(24)
@@ -406,59 +407,81 @@ body
 
 	.skill__wrapper
 		@include wrapPosition
+		padding: 50px 15px
+
+	.skill__info
+
 		display: flex
-		justify-content: space-between
-		padding: rem(80) rem(15)rem(120)
+		justify-content: center
+		//padding: rem(80) 0 rem(120)
 		align-items: center
 
 		.skill__img
-			margin-right: rem(67)
 
-		.skill__topic
-			font-weight: 900
-			font-size: rem(30)
+			//object-fit: cover
+			// width: 100%
+			// height: 100%
 
-			text-transform: uppercase
-			color: #333333
-			margin: rem(44) 0 rem(19) 0
-			&::after
-				content: ""
-				display: block
-				width: rem(60)
-				padding-top: rem(20)
-				border-bottom: 3px solid $blueColor
+			//margin-right: 25px
+			width: calc(150px + (500 - 265) * ((100vw - 320px) / (1170 - 320)))
+			// max-width: 90%
+			// height: auto
+			//margin-right: rem(50)
 
-		.skill__descr
-			color: #666
-			margin: 0 0 rem(39) 0
-
-		.skill__items
-			display: flex
-			justify-content: space-between
-			flex-wrap: wrap
-
-		.skill__item
-			display: flex
-			justify-content: space-between
-			width: rem(305)
-
-		.skill__icon
+	.skill__topic
+		position: relative
+		font-weight: 900
+		font-size: rem(30)
+		text-transform: uppercase
+		color: #333333
+		margin: rem(44) 0 rem(19) 0
+		&::after
+			content: ""
+			display: block
 			width: rem(60)
-			height: rem(60)
+			padding-top: rem(20)
+			border-bottom: 3px solid $blueColor
 
-			background: $blueColor
-			padding: rem(13)
-			margin-right: rem(14)
+	.skill__descr
+		color: #666
+		margin: 0 0 rem(39) 0
 
-		.skill__title
-			font-weight: bold
-			font-size: rem(18)
-			color: #333
-			margin: 0 0 rem(9) 0
+	.skill__items
 
-		.skill__text
-			color: #666
-			margin: 0 0 rem(45) 0
+		display: flex
+		row-gap: calc(15px + (20 - 15) * ((100vw - 320px) / (1170 - 320)))
+		margin-left: 25px
+		justify-content: space-between
+		flex-wrap: wrap
+
+	.skill__item
+		padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1170 - 320)))
+		display: flex
+		justify-content: space-between
+		width: 50%
+
+	.skill__icon
+		height: calc(30px + (60 - 30) * ((100vw - 320px) / (1170 - 320)))
+		// object-fit: none
+		// width: rem(60)
+		width: 40%
+		background: $blueColor
+		padding: rem(13)
+		margin-right: rem(14)
+
+	.skill__title
+		font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1170 - 320)))
+		font-weight: bold
+		//font-size: rem(18)
+		color: #333
+		//margin: 0 0 rem(9) 0
+
+	.skill__text
+		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)))
+		line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)))
+
+		color: #666
+		//margin: 0 0 rem(45) 0
 
 .services
 	background: url(../img/bg_img.png)
