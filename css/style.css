@@ -855,8 +855,14 @@ body {
 }
 
 .services {
-  background: url(../img/bg_img.png);
+  background: url(../img/bg-service.jpeg);
   padding: 5rem 0 6.25rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .services {
+    padding: 3.125rem 0 4.375rem;
+  }
 }
 
 .services .wrapper {
@@ -865,12 +871,13 @@ body {
   padding: 0 15px;
   /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
   text-align: center;
+  margin: 0 auto;
   color: #fff;
 }
 
 .services__title {
   font-weight: 900;
-  font-size: 1.875rem;
+  font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)));
   text-transform: uppercase;
   margin: 0;
 }
@@ -885,6 +892,12 @@ body {
   margin-bottom: 4rem;
 }
 
+@media (max-width: 36.875rem) {
+  .services__title::after {
+    margin: 0 auto;
+  }
+}
+
 .services__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -894,12 +907,33 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 36.875rem) {
+  .services__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 3.125rem 0;
+  }
+}
+
+@media (max-width: 26.5rem) {
+  .services__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .services__proff {
-  width: 16.875rem;
-  height: 16.5625rem;
+  width: 24%;
+  height: auto;
   background: none;
   border: 4px solid #013E99;
-  padding: 3.25rem 1.1875rem 3.0625rem;
+  padding: 3.0625rem 1.1875rem 0;
+  padding-bottom: calc(20px + (52 - 20) * ((100vw - 320px) / (1170 - 320)));
   margin-bottom: 4.0625rem;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -910,23 +944,58 @@ body {
   background: #013E99;
 }
 
+@media (max-width: 48.0625rem) {
+  .services__proff {
+    padding: 1.875rem 0.625rem;
+  }
+}
+
+@media (max-width: 36.875rem) {
+  .services__proff {
+    width: 40%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 26.5rem) {
+  .services__proff {
+    width: 13.75rem;
+  }
+}
+
 .services__link {
   text-decoration: none;
 }
 
 .services__icon {
+  width: calc(20px + (50 - 20) * ((100vw - 320px) / (1170 - 320)));
+  height: 3.625rem;
   margin-bottom: 1.6875rem;
+}
+
+@media (max-width: 48.0625rem) {
+  .services__icon {
+    margin-bottom: 0.8125rem;
+  }
+}
+
+@media (max-width: 26.5rem) {
+  .services__icon {
+    width: calc(40px + (50 - 20) * ((100vw - 320px) / (1170 - 320)));
+  }
 }
 
 .services__name {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)));
   margin: 0;
   margin-bottom: 0.8125rem;
   color: #fff;
 }
 
 .services__text {
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)));
+  line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)));
   color: #CCC;
 }
 
@@ -937,7 +1006,7 @@ body {
   background: #FFB619;
   border: 2px solid #FFB619;
   text-transform: uppercase;
-  padding: 1rem 2.3125rem;
+  padding: 1rem 2.1875rem;
   text-decoration: none;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -1013,27 +1082,27 @@ body {
 }
 
 .project .project__picture-1 {
-  background: url("../img/project_jmg-1.png") center/cover no-repeat;
+  background: url("../img/project_jmg-1.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture-2 {
-  background: url("../img/project_jmg-3.png") center/cover no-repeat;
+  background: url("../img/project_jmg-2.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture-3 {
-  background: url("../img/project_jmg-2.png") center/cover no-repeat;
+  background: url("../img/project_jmg-3.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture-4 {
-  background: url("../img/project_jmg-2.png") center/cover no-repeat;
+  background: url("../img/project_jmg-4.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture-5 {
-  background: url("../img/project_jmg-1.png") center/cover no-repeat;
+  background: url("../img/project_jmg-5.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture-6 {
-  background: url("../img/project_jmg-3.png") center/cover no-repeat;
+  background: url("../img/project_jmg-6.jpeg") center/cover no-repeat;
 }
 
 .project .project__picture {

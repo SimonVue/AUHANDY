@@ -518,17 +518,20 @@ body
 		color: #666
 
 .services
-	background: url(../img/bg_img.png)
+	background: url(../img/bg-service.jpeg)
 	padding: rem(80) 0 rem(100)
+	@media(max-width: rem(767))
+		padding: rem(50) 0 rem(70)
 
 	.wrapper
 		@include wrapPosition
 		text-align: center
+		margin: 0 auto
 		color: #fff
 
 	&__title
 		font-weight: 900
-		font-size: rem(30)
+		font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)))
 		text-transform: uppercase
 		margin: 0
 		&::after
@@ -540,35 +543,64 @@ body
 			border-bottom: 3px solid $orangeColor
 			margin-bottom: rem(64)
 
+			@media(max-width: rem(590))
+				margin: 0 auto
+
 	&__block
 		display: flex
 		justify-content: space-between
+		@media(max-width: rem(590))
+			justify-content: center
+			flex-wrap: wrap
+			gap: rem(20);
+
+			padding: rem(50) 0
+
+		@media(max-width: rem(424))
+			justify-content: center
 
 	&__proff
-		width: rem(270)
-		height: rem(265)
+		width: 24%
+		height: auto
 		background: none
 		border: 4px solid $blueColor
-		padding: rem(52) rem(19) rem(49)
+		padding: rem(49) rem(19) 0
+		padding-bottom: calc(20px + (52 - 20) * ((100vw - 320px) / (1170 - 320)))
 		margin-bottom: rem(65)
 		transition: .2s
 		&:hover
 			background: $blueColor
+		@media(max-width: rem(769))
+			padding: rem(30) rem(10)
+		@media(max-width: rem(590))
+			width: 40%
+			margin: 0
+		@media(max-width: rem(424))
+			width: rem(220)
 
 	&__link
 		text-decoration: none
 
 	&__icon
+		width: calc(20px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
+		height: rem(58)
 		margin-bottom: rem(27)
+		@media(max-width: rem(769))
+			margin-bottom: rem(13)
+
+		@media(max-width: rem(424))
+			width: calc(40px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
 
 	&__name
 		font-weight: bold
-		font-size: rem(24)
+		font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
 		margin: 0
 		margin-bottom: rem(13)
 		color: #fff
 
 	&__text
+		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)))
+		line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
 		color: #CCC
 
 	&__btn
@@ -577,7 +609,7 @@ body
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
-		padding: rem(16) rem(37)
+		padding: rem(16) rem(35)
 		text-decoration: none
 		transition: .2s
 		&:hover
@@ -628,17 +660,17 @@ body
 		margin-bottom: rem(65)
 
 	.project__picture-1
-		background: url('../img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-1.jpeg')center / cover no-repeat
 	.project__picture-2
-		background: url('../img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-2.jpeg')center / cover no-repeat
 	.project__picture-3
-		background: url('../img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-3.jpeg')center / cover no-repeat
 	.project__picture-4
-		background: url('../img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-4.jpeg')center / cover no-repeat
 	.project__picture-5
-		background: url('../img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-5.jpeg')center / cover no-repeat
 	.project__picture-6
-		background: url('../img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-6.jpeg')center / cover no-repeat
 
 	.project__picture
 		position: relative
