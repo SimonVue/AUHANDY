@@ -679,6 +679,10 @@ body
 		&:hover .project__overlay
 			opacity: 1
 
+		@media(max-width: rem(1200))
+			width: calc(200px + (390 - 200) * ((100vw - 320px) / (1170 - 320)))
+			height: auto
+
 		.project__overlay
 			position: absolute
 			top: 0
