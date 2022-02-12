@@ -1109,6 +1109,7 @@ body {
   position: relative;
   width: 24.375rem;
   height: 18.25rem;
+  margin: 0 auto;
 }
 
 .project .project__picture:hover .project__overlay {
@@ -1117,8 +1118,8 @@ body {
 
 @media (max-width: 75rem) {
   .project .project__picture {
-    width: calc(200px + (390 - 200) * ((100vw - 320px) / (1170 - 320)));
-    height: auto;
+    width: 33.333%;
+    height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)));
   }
 }
 
@@ -1128,7 +1129,7 @@ body {
   left: 0;
   right: 0;
   height: 18.25rem;
-  padding: 6.8125rem 0 6.1875rem;
+  padding: 6.8125rem 0.9375rem 6.1875rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1145,6 +1146,14 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 75rem) {
+  .project .project__picture .project__overlay {
+    padding-top: calc(10px + (109 - 10) * ((100vw - 320px) / (1170 - 320)));
+    padding-bottom: calc(15px + (99 - 15) * ((100vw - 320px) / (1170 - 320)));
+    height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
 .project .project__picture .project__overlay .project__name {
   font-weight: bold;
   font-size: 1.25rem;
@@ -1153,16 +1162,35 @@ body {
   margin: 0 0 0.3125rem 0;
 }
 
+@media (max-width: 75rem) {
+  .project .project__picture .project__overlay .project__name {
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1170 - 320)));
+    line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
 .project .project__picture .project__overlay .project__subname {
   text-align: center;
   color: #CCC;
   margin: 0 0 1.0625rem 0;
 }
 
+@media (max-width: 75rem) {
+  .project .project__picture .project__overlay .project__subname {
+    font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
 .project .project__picture .project__overlay i {
   display: block;
   text-align: center;
   color: #fff;
+}
+
+@media (max-width: 41.25rem) {
+  .project .project__picture .project__overlay i {
+    display: none;
+  }
 }
 
 .project .project__btn {
