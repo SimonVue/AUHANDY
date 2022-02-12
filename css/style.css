@@ -1106,6 +1106,12 @@ body {
   }
 }
 
+@media (max-width: 23.75rem) {
+  .project .project__cards {
+    gap: 20px;
+  }
+}
+
 .project .project__picture-1 {
   background: url("../img/project_jmg-1.jpeg") center/cover no-repeat;
 }
@@ -1154,6 +1160,13 @@ body {
   }
 }
 
+@media (max-width: 23.75rem) {
+  .project .project__picture {
+    width: 80%;
+    height: 110px;
+  }
+}
+
 .project .project__picture .project__overlay {
   position: absolute;
   top: 0;
@@ -1185,6 +1198,12 @@ body {
   }
 }
 
+@media (max-width: 23.75rem) {
+  .project .project__picture .project__overlay {
+    height: 110px;
+  }
+}
+
 .project .project__picture .project__overlay .project__name {
   font-weight: bold;
   font-size: 1.25rem;
@@ -1200,6 +1219,12 @@ body {
   }
 }
 
+@media (max-width: 23.75rem) {
+  .project .project__picture .project__overlay .project__name {
+    display: none;
+  }
+}
+
 .project .project__picture .project__overlay .project__subname {
   text-align: center;
   color: #CCC;
@@ -1212,6 +1237,14 @@ body {
   }
 }
 
+@media (max-width: 23.75rem) {
+  .project .project__picture .project__overlay .project__subname {
+    color: #FFB619;
+    margin: 0 0 1.875rem 0;
+    font-size: 1.125rem;
+  }
+}
+
 .project .project__picture .project__overlay i {
   display: block;
   text-align: center;
@@ -1221,6 +1254,12 @@ body {
 @media (max-width: 41.25rem) {
   .project .project__picture .project__overlay i {
     display: none;
+  }
+}
+
+@media (max-width: 23.75rem) {
+  .project .project__picture .project__overlay i {
+    display: block;
   }
 }
 
