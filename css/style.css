@@ -1023,12 +1023,12 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
-  padding: 5rem 0 8.5625rem;
+  padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1170 - 320))) 0 calc(60px + (137 - 60) * ((100vw - 320px) / (1170 - 320)));
 }
 
 .project__title {
   font-weight: 900;
-  font-size: 1.875rem;
+  font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)));
   text-align: center;
   color: #333;
   text-transform: uppercase;
@@ -1040,9 +1040,15 @@ body {
   display: block;
   margin: 0 auto;
   width: 3.75rem;
-  padding-top: 1.25rem;
+  padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1170 - 320)));
   border-bottom: 3px solid #013E99;
   margin-bottom: 2.625rem;
+}
+
+@media (max-width: 31.25rem) {
+  .project__title::after {
+    margin: 0 auto;
+  }
 }
 
 .project__list {
@@ -1072,6 +1078,19 @@ body {
   color: #FFB619;
 }
 
+@media (max-width: 44.375rem) {
+  .project__link {
+    margin: 0 calc(4px + (16 - 4) * ((100vw - 320px) / (1170 - 320)));
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
+@media (max-width: 31.25rem) {
+  .project__link {
+    display: none;
+  }
+}
+
 .project .project__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1079,6 +1098,12 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 4.0625rem;
+}
+
+@media (max-width: 26.625rem) {
+  .project .project__cards {
+    gap: 3px;
+  }
 }
 
 .project .project__picture-1 {
@@ -1109,7 +1134,6 @@ body {
   position: relative;
   width: 24.375rem;
   height: 18.25rem;
-  margin: 0 auto;
 }
 
 .project .project__picture:hover .project__overlay {
@@ -1120,6 +1144,13 @@ body {
   .project .project__picture {
     width: 33.333%;
     height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
+@media (max-width: 26.875rem) {
+  .project .project__picture {
+    width: 49%;
+    margin: 0 auto;
   }
 }
 
@@ -1141,9 +1172,9 @@ body {
   background: -o-linear-gradient(bottom, rgba(28, 62, 155, 0.8), rgba(28, 62, 155, 0.8));
   background: linear-gradient(0deg, rgba(28, 62, 155, 0.8), rgba(28, 62, 155, 0.8));
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (max-width: 75rem) {
