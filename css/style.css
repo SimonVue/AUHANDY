@@ -1239,21 +1239,27 @@ body {
   }
 }
 
-.project .project__picture .project__overlay i {
+.project .project__picture .project__overlay .project__search {
   display: block;
+  width: 25px;
   text-align: center;
+  margin: 0 auto;
+}
+
+.project .project__picture .project__overlay .project__search a {
   color: #fff;
 }
 
 @media (max-width: 41.25rem) {
-  .project .project__picture .project__overlay i {
+  .project .project__picture .project__overlay .project__search {
     display: none;
   }
 }
 
 @media (max-width: 26.875rem) {
-  .project .project__picture .project__overlay i {
+  .project .project__picture .project__overlay .project__search {
     display: block;
+    width: 25px;
   }
 }
 
