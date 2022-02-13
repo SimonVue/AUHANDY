@@ -29,29 +29,31 @@
 	</div>
 	<header class="header">
 		<div class="wrapper">
-
 			<nav class="nav">
-				<a href="#" class="nav__logo"><img src="img/Logo.png" alt="logo" class="logo"></a>
-				<div class="nav__menu">
-					<a href="#" class="nav__item">Home</a>
-					<a href="#" class="nav__item">Services</a>
-					<a href="#" class="nav__item">Projects</a>
-					<a href="#" class="nav__item">Pages</a>
-					<a href="#" class="nav__item">Blog</a>
-					<a href="#" class="nav__item">Contact</a>
-					<a href="#" class="nav__item"><i class="fas fa-search"></i></a>
+				<a href="#" class="nav__logo"><img src="img/Logo.jpeg" alt="logo" class="logo"></a>
+				<div class="nav__menu" id="nav-menu">
+					<a href="#" class="nav__menu_item">Home</a>
+					<a href="#" class="nav__menu_item">Services</a>
+					<a href="#" class="nav__menu_item">Projects</a>
+					<a href="#" class="nav__menu_item">Pages</a>
+					<a href="#" class="nav__menu_item">Blog</a>
+					<a href="#" class="nav__menu_item">Contact</a>
+					<a href="#" class="nav__menu_item"><span><i class="fas fa-search"></i></span></a>
+				</div>
+				<div class="menu-burger">
+					<span></span>
 				</div>
 			</nav>
 		</div>
 	</header>
-	<!-- <main class="content">
+	<main class="content">
 		<section class="promo">
 			<div class="wrapper promo__wrapper">
-				<img src="img/rabbit.png" alt="img" class="promo__img">
+				<img src="img/promo_man.jpeg" alt="img" class="promo__img">
 				<div class="promo__block">
 					<h1 class="promo__title">Expert Handyman & Remodeling</h1>
-					<p class="promo__text">Integer consectetur dapibus nisi, et faucibus augue lobortis ut. Proin quis porttitor
-						sem. Donec ultrices felis quis tincidunt</p>
+					<p class="promo__text">Professional service "Auhandy" offers services for household repairs of any
+						complexity</p>
 					<button type="button" id="learn" class="promo__btn promo__btn-learn">Learn More</button>
 					<button type="button" class="promo__btn promo__btn-quote">Get A Quote</button>
 
@@ -75,39 +77,44 @@
 				</div>
 			</div>
 			<div class="wrapper skill__wrapper">
-				<img src="img/skill-img.png" alt="img" class="skill__img">
+				<h2 class="skill__topic">Why Choose Us</h2>
+				<p class="skill__descr">The Auhandy service is known for its responsible attitude to its work. Our craftsmen
+					calculate the algorithm for performing the service down to the smallest nuances, including the features of
+					the selection of building materials depending on humidity, temperature and even wind roses.</p>
 				<div class="skill__info">
-					<h2 class="skill__topic">Why Choose Us</h2>
-					<p class="skill__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ligula temp
-						cursus justo eu, blandit quam. Sed viverra, quam ut maximus porta, lorem bibendum metus, et eleifend mi nunc
-						ac arcu facilisis lorem urna eu quam.</p>
+					<div class="skill__img">
+						<img src="img/skill-img.jpeg" alt="img">
+					</div>
+
 					<div class="skill__items">
 						<div class="skill__item">
 							<img src="img/icon_1.svg" alt="img" class="skill__icon">
 							<div class="skill__item-info">
-								<h3 class="skill__title">Easy To Customize.</h3>
-								<p class="skill__text">Mauris efficitur mi eu nisi venenatis vestibulum sit tellus. </p>
+								<h3 class="skill__title">The best works.</h3>
+								<p class="skill__text">We employ only professional craftsmen who know their business perfectly.</p>
 							</div>
 						</div>
 						<div class="skill__item">
 							<img src="img/icon_2.svg" alt="img" class="skill__icon">
 							<div class="skill__item-info">
 								<h3 class="skill__title">Easy To Customize.</h3>
-								<p class="skill__text">Mauris efficitur mi eu nisi venenatis vestibulum sit tellus. </p>
+								<p class="skill__text">The repairman will complete the work by the day specified in the contract</p>
 							</div>
 						</div>
 						<div class="skill__item">
 							<img src="img/icon_3.svg" alt="img" class="skill__icon">
 							<div class="skill__item-info">
-								<h3 class="skill__title">Easy To Customize.</h3>
-								<p class="skill__text">Mauris efficitur mi eu nisi venenatis vestibulum sit tellus. </p>
+								<h3 class="skill__title">Our 2 Years Warranties</h3>
+								<p class="skill__text">Warranties for all types of services - up to 1 year, depending on the specific
+									tasks;</p>
 							</div>
 						</div>
 						<div class="skill__item">
 							<img src="img/icon_4.svg" alt="img" class="skill__icon">
 							<div class="skill__item-info">
-								<h3 class="skill__title">Easy To Customize.</h3>
-								<p class="skill__text">Mauris efficitur mi eu nisi venenatis vestibulum sit tellus. </p>
+								<h3 class="skill__title">Faster Services.</h3>
+								<p class="skill__text">Worthy service - we work quickly, without smokers and telephone conversations,
+									always We remove trash behind you.</p>
 							</div>
 						</div>
 					</div>
@@ -163,44 +170,57 @@
 				<div class="project__cards">
 					<div class="project__picture project__picture-1">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<h3 class="project__name">Find out more in this catalog.</h3>
+							<p class="project__subname">Wall Paint</p>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="project__picture project__picture-2">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<h3 class="project__name">Find out more in this catalog.</h3>
+							<p class="project__subname">Electrical</p>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
+
 						</div>
 					</div>
 					<div class="project__picture project__picture-3">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
+							<h3 class="project__name">Find out more in this catalog.</h3>
 							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="project__picture project__picture-4">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<h3 class="project__name">Find out more in this catalog.</h3>
+							<p class="project__subname">Plumbing</p>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="project__picture project__picture-5">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<h3 class="project__name">Find out more in this catalog.</h3>
+							<p class="project__subname">Repair House</p>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="project__picture project__picture-6">
 						<div class="project__overlay">
-							<h3 class="project__name">Pellentesque finibus maximus.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<a href="#" class="project__search"><i class="fas fa-search"></i></a>
+							<h3 class="project__name">Find out more in this catalog.</h3>
+							<p class="project__subname">All Projects</p>
+							<div class="project__search">
+								<a href="#"><i class="fas fa-search"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -208,7 +228,7 @@
 			</div>
 		</section>
 
-		<section class="anyproblem">
+		<!--<section class="anyproblem">
 			<div class="wrapper">
 				<h2 class="anyproblem__title">You have some problems
 					in housing?</h2>
@@ -294,8 +314,8 @@
 			</div>
 		</div>
 	</footer> -->
-	<p class="footer__copyright">Copyright © 2018<span> Auhandy.</span> Get The Theme</p>
-	<script src="js/main.js"></script>
+		<p class="footer__copyright">Copyright © 2018<span> Auhandy.</span> Get The Theme</p>
+		<script src="js/main.js"></script>
 </body>
 
 </html>

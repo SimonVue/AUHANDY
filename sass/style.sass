@@ -11,6 +11,7 @@ html
 body
 	display: flex
 	flex-direction: column
+
 	font-family: 'Lato', sans-serif
 	font-size: rem(16)
 	line-height: rem(24)
@@ -53,72 +54,144 @@ body
 			position: relative
 			display: flex
 			justify-content: space-between
-			padding: rem(30) 0
+			padding: rem(10) 0
+			align-items: center
 
 			.logo
 				@media ( max-width:	686px)
 					width: 90%
+					vertical-align: bottom
 
 			&__menu
-				margin-top: rem(18);
 				@media ( max-width:	686px)
 					display: flex
 					flex-direction: column
-					width: 55vw
-					height: 100vh
-					padding: 40px
+					width: 100%
+					height: 100%
+					padding: rem(12) rem(24)
+					padding-top: rem(65)
 					margin: 0
-					border: 1px solid #000
-					background: #fff
-					position: absolute
+					border: none
+					background: #1b1922f2
+					transition: .2s
+					position: fixed
 					top: 0
-					right: -15px
+					right: 0
+					overflow: auto
 					z-index: 1
 
-			&__item
-				position: relative
-				display: inline-block
-				text-decoration: none
-				margin-left: rem(40);
-				font-weight: bold
-				text-transform: uppercase
-				color: #333333
-				cursor: pointer
-				overflow: hidden
+				&_item
+					position: relative
+					display: inline-block
+					text-decoration: none
+					margin-left: rem(40)
+					color: #333
+					padding-bottom: 3px
+					font-weight: bold
+					text-transform: uppercase
+					cursor: pointer
+					overflow: hidden
 
-				&::after
-					transition: all 0.4s ease-out
-					content: ' '
-					display: block
-					width: calc(100% - 40% )
-					height: 2px
-					background: $orangeColor
-					position: absolute
-					bottom: 0
-					left: -100%
-
-				&:hover
-					color: $orangeColor
 					&::after
-						left: 0
+						transition: all 0.4s ease-out
+						content: ' '
+						display: block
+						width: 100%
+						height: 2px
+						background: $orangeColor
+						position: absolute
+						bottom: 0
+						left: -100%
+						@media(max-width: 686px)
+							width: calc(100% - 50% )
 
-				@media ( max-width:	905px)
-					margin-left: rem(20)
-					font-size: rem(12)
-				@media ( max-width:	686px)
-					font-size: rem(12)
-					line-height: rem(29)
-					margin: 0
+					&:hover
+						color: $orangeColor
+						&::after
+							left: 0
+
+					@media ( max-width:	905px)
+						margin-left: rem(20)
+						font-size: rem(12)
+					@media ( max-width:	686px)
+						color: #ddd
+						font-size: rem(18)
+						letter-spacing: 1.8px
+						line-height: rem(45)
+						margin: 0
+
+				&_item:last-child
+					margin-left: rem(25)
 
 				@media (max-width: 686px)
-					display: none
+					top: 0
+					right: -100%
 
-			&__item:last-child
-				margin-left: rem(25)
+			._open
+				right: 0
+
+._lock
+	overflow: hidden
+
+// ======================= Burger ============================
+.menu-burger
+	display: none
+
+	@media(max-width: 686px)
+		display: block
+		position: relative
+		width: rem(30)
+		height: rem(18)
+		cursor: pointer
+		z-index: 1
+
+	span,
+	&::before,
+	&::after
+		left: 0
+		position: absolute
+		height: 3px
+		width: 100%
+		transition: all 0.3s ease 0s
+		background: #333333
+
+	&::before,
+	&::after
+		content: ""
+
+	&::before
+		top: 0
+
+	&::after
+		bottom: 0
+
+	span
+		top: 50%
+		transform: scale(1) translate(0px, -50%)
+
+._close
+
+	span
+		background: #ddd
+		transform: scale(0) translate(0px, -50%)
+
+	&::before
+		background: #ddd
+		top: 50%
+		transform: rotate(-45deg) translate(0px, -50%)
+
+	&::after
+		background: #ddd
+		top: 50%
+		transform: rotate(45deg) translate(0px, 50%)
 
 .promo
-	background: url('/img/bg_img.png')center / cover no-repeat
-	padding: rem(118) 0 rem(132)
+	background: url('../img/bg_img.jpeg')center / cover no-repeat
+	padding: rem(118) 0
+	@media(max-width: 720px)
+		padding: rem(59) 0
+	@media(max-width: 430px)
+		padding: rem(39) 0
 
 	.wrapper
 		@include wrapPosition
@@ -126,26 +199,44 @@ body
 	.promo__wrapper
 		display: flex
 		justify-content: space-between
+		align-items: center
+		gap: rem(50)
+
+		@media(max-width: 720px)
+			display: block
+			text-align: center
+			width: 90%
+		@media(max-width: 430px)
+			width: 100%
 
 	&__img
-		margin: 0 rem(68) 0 rem(50)
+		width: 40%
+		height: 100%
 
 	.promo__block
 		color: #fff
-		margin-top: rem(77)
+		@media(max-width: 490px)
+			margin: 0 auto
 
 	&__title
 		font-weight: bold
 		font-size: rem(39)
+		line-height: 50px
+		letter-spacing: 2px
 		margin: 0 0 rem(20) 0
+		@media(max-width: 1030px)
+			font-size: rem(35)
+			@media(max-width: 430px)
+				font-size: rem(30)
 
 	&__text
-		font-size: rem(18);
+		font-size: rem(18)
 		line-height: rem(28)
 		color: #ccc
 		margin: 0 0 rem(40) 0
 
 	&__btn
+		display: inline-block
 		width: rem(169)
 		height: rem(50)
 		font-weight: bold
@@ -157,12 +248,21 @@ body
 			background: #fff
 			color: $orangeColor
 			border: 2px solid #fff
+		@media(max-width: 490px)
+			display: block
+			margin: 0 auto
 
-	.promo__btn-learn
+	&__btn-learn
 		position: relative
 		background: $orangeColor
 		border: transparent
 		margin-right: rem(15)
+
+		@media(max-width: 490px)
+			display: block
+			margin: 0 auto
+
+			margin-bottom: rem(15)
 
 		&:hover
 			background: #fff
@@ -188,6 +288,8 @@ body
 		opacity: 1
 		animation-name: animatetop
 		animation-duration: 0.4s
+		@media(max-width: 360px)
+			width: 100%
 
 		@keyframes "animatetop"
 			from
@@ -211,6 +313,8 @@ body
 			border: none
 			margin-top: rem(15)
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+			@media(max-width: 360px)
+				width: 75%
 
 		.form__btn
 			display: block
@@ -245,21 +349,29 @@ body
 		margin: 0 auto
 		display: flex
 		justify-content: space-between
-		padding: rem(69) 0
+		padding: rem(50) rem(15)
 		align-items: center
+		@media(max-width: 720px)
+			padding: rem(26) rem(15)
+			@media(max-width: 535px)
+				flex-direction: column
 
-		.skill__sup-info
+		&__sup-info
 			@include wrapPosition
-			height: rem(160)
+			height: rem(100)
 
 		.skill__bg
 			position: absolute
 			top: 0
 			left: 0
 			width: 100%
-			height: rem(190)
-			background: url('/img/skill-bg.png')center / cover no-repeat
+			height: rem(150)
+			background: url('../img/skill-bg.jpeg')center / cover no-repeat
 			z-index: -1
+			@media(max-width: 720px)
+				height: rem(100)
+			@media(max-width: 535px)
+				height: rem(140)
 
 		.skill__sup-text
 			font-weight: bold
@@ -267,6 +379,10 @@ body
 			line-height: rem(22)
 			color: #333333
 			margin: 0
+			@media(max-width: 720px)
+				font-size: rem(14)
+			@media(max-width: 535px)
+				margin-bottom: rem(15)
 
 		.skill__btn
 			font-weight: bold
@@ -278,6 +394,10 @@ body
 			cursor: pointer
 			transition: .2s
 			@include backgroundBorder
+			@media(max-width: 720px)
+				font-size: rem(14)
+			@media(max-width: 535px)
+				padding: rem(13) rem(12)
 			&:hover
 				background: #fff
 				@include colorBorder
@@ -287,72 +407,131 @@ body
 
 	.skill__wrapper
 		@include wrapPosition
+		padding: rem(50) rem(15)
+
+	.skill__info
 		display: flex
-		justify-content: space-between
-		padding: rem(80) 0 rem(120)
-		align-items: center
+		justify-content: center
+
+		@media(max-width: rem(720))
+			flex-direction: column
+			padding: 0
 
 		.skill__img
-			margin-right: rem(67)
+			position: relative
+			flex: 0 0 37%
+			@media(max-width: rem(720))
+				flex: 0 0 rem(260)
+				position: relative
+				max-width: 100%
+				object-fit: none
+			img
+				position: absolute
+				top: 0
+				left: 0
+				object-fit: cover
+				width: 100%
+				height: 100%
+				@media(max-width: rem(470))
+					height: 80%
 
-		.skill__topic
-			font-weight: 900
-			font-size: rem(30)
+	.skill__topic
+		position: relative
+		font-weight: 900
+		font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1170 - 320)))
+		text-transform: uppercase
+		color: #333333
+		padding: rem(19) 0
 
-			text-transform: uppercase
-			color: #333333
-			margin: rem(44) 0 rem(19) 0
-			&::after
-				content: ""
-				display: block
-				width: rem(60)
-				padding-top: rem(20)
-				border-bottom: 3px solid $blueColor
+		@media(max-width: rem(720))
+			padding-top: 0
 
-		.skill__descr
-			color: #666
-			margin: 0 0 rem(39) 0
-
-		.skill__items
-			display: flex
-			justify-content: space-between
-			flex-wrap: wrap
-
-		.skill__item
-			display: flex
-			justify-content: space-between
-			width: rem(305)
-
-		.skill__icon
+		&::after
+			content: ""
+			display: block
 			width: rem(60)
-			height: rem(60)
+			padding-top: rem(20)
+			border-bottom: 3px solid $blueColor
 
-			background: $blueColor
-			padding: rem(13)
-			margin-right: rem(14)
+	.skill__descr
+		color: #666
+		font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1170 - 320)))
+		line-height: calc(16px + (24 - 16) * ((100vw - 320px) / (1170 - 320)))
+		margin: 0 0 rem(39) 0
 
-		.skill__title
-			font-weight: bold
-			font-size: rem(18)
-			color: #333
-			margin: 0 0 rem(9) 0
+		@media(max-width: rem(720))
+			margin-bottom: rem(20)
 
-		.skill__text
-			color: #666
-			margin: 0 0 rem(45) 0
+	.skill__items
+		display: flex
+		row-gap: calc((5px + (20 - 5) * ((100vw - 320px)) / (1170 - 320)))
+		margin-left: calc((5px + (25 - 5) * ((100vw - 320px)) / (1170 - 320)))
+		justify-content: space-between
+		flex-wrap: wrap
+
+		@media(max-width: rem(720))
+			margin: 0
+
+		@media(max-width: rem(424))
+			flex-direction: column
+
+	.skill__item
+		padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1170 - 320)))
+		display: flex
+		justify-content: space-between
+		width: 50%
+		padding-top: 0
+		@media(max-width: rem(720))
+			padding-top: rem(20)
+			@media(max-width: rem(470))
+				padding-top: 0
+				padding-bottom: rem(20)
+
+		@media(max-width: rem(424))
+			width: 100%
+			align-items: flex-start
+			padding: 0 0 rem(20)
+
+	.skill__icon
+		height: calc(30px + (50 - 30) * ((100vw - 320px) / (1170 - 320)))
+		width: auto
+		background: $blueColor
+		padding: rem(13)
+		margin-right: rem(14)
+		@media(max-width: 720px)
+			width: rem(35)
+			height: rem(35)
+			padding: rem(8)
+
+	.skill__title
+		font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1170 - 320)))
+		font-weight: bold
+		color: #333
+		margin: 0 0 rem(7) 0
+		@media(max-width: 1023px)
+			margin: 0
+
+	.skill__text
+		font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (1170 - 320)))
+		line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)))
+
+		color: #666
 
 .services
-	background: url(/img/bg_img.png)
+	background: url(../img/bg-service.jpeg)
 	padding: rem(80) 0 rem(100)
+	@media(max-width: rem(767))
+		padding: rem(50) 0 rem(70)
 
 	.wrapper
 		@include wrapPosition
 		text-align: center
+		margin: 0 auto
 		color: #fff
 
 	&__title
 		font-weight: 900
-		font-size: rem(30)
+		font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)))
 		text-transform: uppercase
 		margin: 0
 		&::after
@@ -364,35 +543,64 @@ body
 			border-bottom: 3px solid $orangeColor
 			margin-bottom: rem(64)
 
+			@media(max-width: rem(590))
+				margin: 0 auto
+
 	&__block
 		display: flex
 		justify-content: space-between
+		@media(max-width: rem(590))
+			justify-content: center
+			flex-wrap: wrap
+			gap: rem(20);
+
+			padding: rem(50) 0
+
+		@media(max-width: rem(424))
+			justify-content: center
 
 	&__proff
-		width: rem(270)
-		height: rem(265)
+		width: 24%
+		height: auto
 		background: none
 		border: 4px solid $blueColor
-		padding: rem(52) rem(19) rem(49)
+		padding: rem(49) rem(19) 0
+		padding-bottom: calc(20px + (52 - 20) * ((100vw - 320px) / (1170 - 320)))
 		margin-bottom: rem(65)
 		transition: .2s
 		&:hover
 			background: $blueColor
+		@media(max-width: rem(769))
+			padding: rem(30) rem(10)
+		@media(max-width: rem(590))
+			width: 40%
+			margin: 0
+		@media(max-width: rem(424))
+			width: rem(220)
 
 	&__link
 		text-decoration: none
 
 	&__icon
+		width: calc(20px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
+		height: rem(58)
 		margin-bottom: rem(27)
+		@media(max-width: rem(769))
+			margin-bottom: rem(13)
+
+		@media(max-width: rem(424))
+			width: calc(40px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
 
 	&__name
 		font-weight: bold
-		font-size: rem(24)
+		font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
 		margin: 0
 		margin-bottom: rem(13)
 		color: #fff
 
 	&__text
+		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)))
+		line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
 		color: #CCC
 
 	&__btn
@@ -401,7 +609,7 @@ body
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
-		padding: rem(16) rem(37)
+		padding: rem(16) rem(35)
 		text-decoration: none
 		transition: .2s
 		&:hover
@@ -411,11 +619,11 @@ body
 .project
 	.wrapper
 		@include wrapPosition
-		padding: rem(80) 0 rem(137)
+		padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1170 - 320))) 0 calc(60px + (137 - 60) * ((100vw - 320px) / (1170 - 320)))
 
 	&__title
 		font-weight: 900
-		font-size: rem(30)
+		font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)))
 		text-align: center
 		color: #333
 		text-transform: uppercase
@@ -425,9 +633,12 @@ body
 			display: block
 			margin: 0 auto
 			width: rem(60)
-			padding-top: rem(20)
+			padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1170 - 320)))
 			border-bottom: 3px solid $blueColor
-			margin-bottom: rem(42);
+			margin-bottom: rem(42)
+
+			@media(max-width: rem(500))
+				margin: 0 auto;
 
 	&__list
 		display: flex
@@ -446,30 +657,57 @@ body
 		&:hover
 			color: $orangeColor
 
+		@media(max-width: rem(710))
+			margin: 0 calc(4px + (16 - 4) * ((100vw - 320px) / (1170 - 320)))
+			font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1170 - 320)))
+
+		@media(max-width: rem(500))
+			display: none
+
 	.project__cards
 		display: flex
 		flex-wrap: wrap
 		margin-bottom: rem(65)
 
+		@media(max-width: rem(426))
+			gap: 3px
+
+		@media(max-width: rem(430))
+			gap: 15px
+
 	.project__picture-1
-		background: url('/img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-1.jpeg')center / cover no-repeat
 	.project__picture-2
-		background: url('/img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-2.jpeg')center / cover no-repeat
 	.project__picture-3
-		background: url('/img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-3.jpeg')center / cover no-repeat
 	.project__picture-4
-		background: url('/img/project_jmg-2.png')center / cover no-repeat
+		background: url('../img/project_jmg-4.jpeg')center / cover no-repeat
 	.project__picture-5
-		background: url('/img/project_jmg-1.png')center / cover no-repeat
+		background: url('../img/project_jmg-5.jpeg')center / cover no-repeat
 	.project__picture-6
-		background: url('/img/project_jmg-3.png')center / cover no-repeat
+		background: url('../img/project_jmg-6.jpeg')center / cover no-repeat
 
 	.project__picture
 		position: relative
 		width: rem(390)
 		height: rem(292)
+
 		&:hover .project__overlay
 			opacity: 1
+
+		@media(max-width: rem(1200))
+			width: 33.333%
+			height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)))
+
+		// @media(max-width: rem(430))
+		// 	width: 49%
+		// 	margin: 0 auto
+
+		@media(max-width: rem(430))
+			margin: 0 auto
+			width: 80%
+			height: 130px
 
 		.project__overlay
 			position: absolute
@@ -477,12 +715,20 @@ body
 			left: 0
 			right: 0
 			height: rem(292)
-			padding: rem(109) 0 rem(99)
+			padding: rem(109) rem(8) rem(99)
 			justify-content: center
 			align-items: center
 			background: linear-gradient(0deg, rgba(28, 62, 155, 0.8), rgba(28, 62, 155, 0.8))
 			opacity: 0
-			transition: 0.3s
+			transition: 0.4s
+
+			@media(max-width: rem(1200))
+				padding-top: calc(10px + (109 - 10) * ((100vw - 320px) / (1170 - 320)))
+				padding-bottom: calc(15px + (99 - 15) * ((100vw - 320px) / (1170 - 320)))
+				height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)))
+
+			@media(max-width: rem(430))
+				height: 130px
 
 			.project__name
 				font-weight: bold
@@ -491,15 +737,40 @@ body
 				color: $orangeColor
 				margin: 0 0 rem(5) 0
 
+				@media(max-width: rem(1200))
+					font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1170 - 320)))
+					line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
+
+				@media(max-width: rem(380))
+					display: none
+
 			.project__subname
 				text-align: center
 				color: #CCC
 				margin: 0 0 rem(17) 0
+				@media(max-width: rem(1200))
+					font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1170 - 320)))
 
-			i
+				@media(max-width: rem(380))
+					color: $orangeColor
+					margin: 0 0 rem(30) 0
+					font-size: rem(18)
+
+			.project__search
 				display: block
+				width: 25px
 				text-align: center
-				color: #fff
+				margin: 0 auto
+
+				a
+					color: #fff
+
+				@media(max-width: rem(660))
+					display: none
+
+				@media(max-width: rem(430))
+					display: block
+					width: 25px
 
 	.project__btn
 		text-align: center
@@ -518,7 +789,7 @@ body
 			@include colorBorder
 
 .anyproblem
-	background: url('/img/bg_img.png')center / cover no-repeat
+	background: url('../img/bg_img.png')center / cover no-repeat
 	padding: rem(176) 0 rem(218)
 
 	.wrapper
@@ -553,7 +824,7 @@ body
 				margin-right: rem(10)
 
 .location
-	background: url('/img/skill-bg.png')center / cover no-repeat
+	background: url('../img/skill-bg.png')center / cover no-repeat
 
 	.wrapper
 		@include wrapPosition
