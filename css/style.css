@@ -1213,7 +1213,7 @@ body {
   }
 }
 
-@media (max-width: 26.6875rem) {
+@media (max-width: 31.25rem) {
   .project .project__picture .project__overlay .project__name {
     display: none;
   }
@@ -1231,7 +1231,7 @@ body {
   }
 }
 
-@media (max-width: 26.6875rem) {
+@media (max-width: 31.25rem) {
   .project .project__picture .project__overlay .project__subname {
     color: #FFB619;
     margin: 0 0 1.875rem 0;
