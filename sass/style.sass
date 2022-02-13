@@ -832,13 +832,14 @@ body
 				margin-right: rem(10)
 
 .location
-	background: url('../img/skill-bg.png')center / cover no-repeat
+	background: url('../img/skill-bg.jpeg')center / cover no-repeat
 
 	.wrapper
 		@include wrapPosition
 		display: flex
-		justify-content: space-between
-		padding: rem(80) 0 rem(98)
+		justify-content: flex-start
+		padding: rem(80) rem(15) rem(98)
+		gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
 
 	&__title
 		font-weight: 900
@@ -855,18 +856,29 @@ body
 			margin-bottom: rem(42)
 
 	&__place
-		margin-right: rem(61)
+		width: 100%
+		width: rem(482)
+		height: 42%
+		//margin-right: rem(61)
 		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+		overflow: hidden
+
+		@media(max-width: rem(1025))
+			width: calc(250px + (450 - 250) * ((100vw - 320px) / (1170 - 320)))
 
 	&__form
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		row-gap: 10px
 
 	&__input
-		width: rem(310)
+		max-width: 302px
+		width: 49%
+		//width: calc(84px + (271 - 100) * ((100vw - 320px) / (1170 - 320)))
+		//width: rem(310)
 		height: rem(50)
-		margin-bottom: 20px
+		//margin-bottom: 20px
 		padding: 0 rem(22)
 		border: none
 		color: #666
@@ -877,7 +889,9 @@ body
 			border: 3px solid #d7fbdf
 
 	&__area
-		width: rem(637)
+		//width: calc(360px + (637 - 360) * ((100vw - 320px) / (1170 - 320)))
+		width: 100%
+		//width: rem(637)
 		height: rem(127)
 		margin-bottom: rem(35)
 		padding: rem(13) rem(22)
