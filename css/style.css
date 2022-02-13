@@ -1155,13 +1155,6 @@ body {
 
 @media (max-width: 26.875rem) {
   .project .project__picture {
-    width: 49%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 23.75rem) {
-  .project .project__picture {
     width: 80%;
     height: 110px;
   }
