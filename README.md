@@ -1,3 +1,3 @@
 # Handyman
 
-Посмотреть сайт: https://simonvue.github.io/HANDYMAN/
+Посмотреть сайт: https://simonvue.github.io/HandyMan/
