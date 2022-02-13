@@ -1023,7 +1023,7 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
-  padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1170 - 320))) 0 calc(60px + (137 - 60) * ((100vw - 320px) / (1170 - 320)));
+  padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1170 - 320))) 0;
 }
 
 .project__title {
@@ -1097,7 +1097,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 4.0625rem;
+  margin-bottom: 3.125rem;
 }
 
 @media (max-width: 26.625rem) {
@@ -1287,8 +1287,8 @@ body {
 }
 
 .anyproblem {
-  background: url("../img/bg_img.png") center/cover no-repeat;
-  padding: 11rem 0 13.625rem;
+  background: url(../img/bg-service.jpeg) center/cover no-repeat;
+  padding: calc(110px + (176 - 110) * ((100vw - 320px) / (1170 - 320))) 0;
 }
 
 .anyproblem .wrapper {
@@ -1299,21 +1299,24 @@ body {
 }
 
 .anyproblem .wrapper .anyproblem__title {
-  width: 31.5rem;
+  max-width: 31.5rem;
   font-weight: bold;
-  font-size: 2.25rem;
-  line-height: 3.25rem;
+  font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1170 - 320)));
+  line-height: calc(40px + (52 - 40) * ((100vw - 320px) / (1170 - 320)));
   color: #fff;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
   margin: 0 0 2rem 0;
 }
 
+@media (max-width: 23.5625rem) {
+  .anyproblem .wrapper .anyproblem__title {
+    text-align: center;
+  }
+}
+
 .anyproblem .wrapper .anyproblem__btn {
-  font-weight: bold;
-  line-height: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
+  display: inline-block;
   padding: 0.8125rem 1.1875rem;
   cursor: pointer;
   -webkit-transition: .2s;
@@ -1324,9 +1327,31 @@ body {
 }
 
 .anyproblem .wrapper .anyproblem__btn:hover {
-  background: #fff;
+  background: none;
   color: #FFB619;
   border: 2px solid #FFB619;
+}
+
+@media (max-width: 23.5625rem) {
+  .anyproblem .wrapper .anyproblem__btn {
+    margin: 0 auto;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.anyproblem .wrapper .anyproblem__btn a {
+  font-weight: bold;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.anyproblem .wrapper .anyproblem__btn a:hover {
+  color: #FFB619;
 }
 
 .anyproblem .wrapper .anyproblem__btn i {
