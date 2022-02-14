@@ -1377,6 +1377,17 @@ body {
   gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)));
 }
 
+@media (max-width: 47.9375rem) {
+  .location .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .location__title {
   font-weight: 900;
   font-size: 1.875rem;
@@ -1397,7 +1408,7 @@ body {
 .location__place {
   width: 100%;
   width: 30.125rem;
-  height: 42%;
+  height: auto;
   -webkit-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
           box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
   overflow: hidden;
@@ -1421,6 +1432,25 @@ body {
   row-gap: 10px;
 }
 
+@media (max-width: 47.9375rem) {
+  .location__form {
+    gap: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 28.75rem) {
+  .location__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+}
+
 .location__input {
   max-width: 302px;
   width: 49%;
@@ -1437,6 +1467,20 @@ body {
 
 .location__input:valid {
   border: 3px solid #d7fbdf;
+}
+
+@media (max-width: 47.9375rem) {
+  .location__input {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 28.75rem) {
+  .location__input {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .location__area {

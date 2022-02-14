@@ -841,6 +841,11 @@ body
 		padding: rem(80) rem(15) rem(98)
 		gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
 
+		@media(max-width: rem(767))
+			flex-direction: column-reverse
+			max-width: 80%
+			margin: 0 auto
+
 	&__title
 		font-weight: 900
 		font-size: rem(30)
@@ -858,7 +863,7 @@ body
 	&__place
 		width: 100%
 		width: rem(482)
-		height: 42%
+		height: auto
 		//margin-right: rem(61)
 		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 		overflow: hidden
@@ -871,6 +876,12 @@ body
 		justify-content: space-between
 		flex-wrap: wrap
 		row-gap: 10px
+		@media(max-width: rem(767))
+			gap: 10px
+			justify-content: space-between
+		@media(max-width: rem(460))
+			flex-direction: column
+			gap: 15px
 
 	&__input
 		max-width: 302px
@@ -887,6 +898,13 @@ body
 
 		&:valid
 			border: 3px solid #d7fbdf
+
+		@media(max-width: rem(767))
+			max-width: 48%
+		@media(max-width: rem(460))
+			max-width: 100%
+			width: 100%
+			margin: 0 auto
 
 	&__area
 		//width: calc(360px + (637 - 360) * ((100vw - 320px) / (1170 - 320)))
