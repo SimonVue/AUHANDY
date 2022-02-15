@@ -1389,6 +1389,7 @@ body {
 }
 
 .location__title {
+  position: relative;
   font-weight: 900;
   font-size: 1.875rem;
   text-transform: uppercase;
@@ -1397,12 +1398,20 @@ body {
 }
 
 .location__title::after {
+  position: absolute;
   content: "";
+  top: 40px;
+  left: 0;
   display: block;
   width: 3.75rem;
-  padding-top: 1.25rem;
   border-bottom: 3px solid #013E99;
   margin-bottom: 2.625rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .location__title {
+    text-align: center;
+  }
 }
 
 .location__place {

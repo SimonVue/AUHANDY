@@ -847,18 +847,23 @@ body
 			margin: 0 auto
 
 	&__title
+		position: relative
 		font-weight: 900
 		font-size: rem(30)
 		text-transform: uppercase
 		margin: 0 0 rem(55) 0
 		color: #333
 		&::after
+			position: absolute
 			content: ""
+			top: 40px
+			left: 0
 			display: block
 			width: rem(60)
-			padding-top: rem(20)
 			border-bottom: 3px solid $blueColor
 			margin-bottom: rem(42)
+		@media(max-width: rem(767))
+			text-align: center
 
 	&__place
 		width: 100%
