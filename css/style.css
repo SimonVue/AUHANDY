@@ -1288,7 +1288,7 @@ body {
 
 .anyproblem {
   background: url(../img/bg-service.jpeg) center/cover no-repeat;
-  padding: calc(110px + (176 - 110) * ((100vw - 320px) / (1170 - 320))) 0;
+  padding: calc(50px + (176 - 50) * ((100vw - 320px) / (1170 - 320))) 0;
 }
 
 .anyproblem .wrapper {
@@ -1301,7 +1301,7 @@ body {
 .anyproblem .wrapper .anyproblem__title {
   max-width: 31.5rem;
   font-weight: bold;
-  font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1170 - 320)));
+  font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1170 - 320)));
   line-height: calc(40px + (52 - 40) * ((100vw - 320px) / (1170 - 320)));
   color: #fff;
   letter-spacing: 1.3px;
@@ -1373,7 +1373,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 5rem 0.9375rem 6.125rem;
+  padding: 5rem 0.9375rem;
   gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)));
 }
 
@@ -1385,6 +1385,12 @@ body {
             flex-direction: column-reverse;
     max-width: 100%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 26.6875rem) {
+  .location .wrapper {
+    padding: 2.5rem 0.9375rem;
   }
 }
 
@@ -1554,6 +1560,12 @@ body {
   padding: 3.4375rem 0;
 }
 
+@media (max-width: 26.6875rem) {
+  .stamp {
+    padding: 1.875rem;
+  }
+}
+
 .stamp .wrapper {
   max-width: 73.125rem;
   margin: 0 auto;
@@ -1564,6 +1576,12 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 10px;
+}
+
+.stamp .wrapper img {
+  width: calc(60px + (110 - 60) * ((100vw - 320px) / (1170 - 320)));
+  height: auto;
 }
 
 .footer {
