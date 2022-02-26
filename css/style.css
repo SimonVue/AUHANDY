@@ -38,7 +38,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +84,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
 }
 
 .header .wrapper .nav {
@@ -301,7 +301,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
 }
 
 .promo .promo__wrapper {
@@ -539,7 +539,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
 }
 
 .skill .skill__sup-wrapper {
@@ -575,7 +575,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   height: 6.25rem;
 }
 
@@ -662,7 +662,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   padding: 3.125rem 0.9375rem;
 }
 
@@ -869,7 +869,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   text-align: center;
   margin: 0 auto;
   color: #fff;
@@ -1022,7 +1022,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1170 - 320))) 0;
 }
 
@@ -1295,7 +1295,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
 }
 
 .anyproblem .wrapper .anyproblem__title {
@@ -1366,7 +1366,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1383,7 +1383,7 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
@@ -1411,6 +1411,8 @@ body {
 @media (max-width: 47.9375rem) {
   .location__title {
     text-align: center;
+    display: inline-block;
+    font-size: 1.5rem;
   }
 }
 
@@ -1426,6 +1428,12 @@ body {
 @media (max-width: 64.0625rem) {
   .location__place {
     width: calc(250px + (450 - 250) * ((100vw - 320px) / (1170 - 320)));
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .location__place {
+    width: 100%;
   }
 }
 
@@ -1508,6 +1516,12 @@ body {
           box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
 }
 
+@media (max-width: 47.9375rem) {
+  .location__area {
+    margin-bottom: 0.9375rem;
+  }
+}
+
 .location__btn {
   width: 8.1875rem;
   height: 3.125rem;
@@ -1524,6 +1538,12 @@ body {
   border: 2px solid #FFB619;
 }
 
+@media (max-width: 47.9375rem) {
+  .location__btn {
+    margin-bottom: 3.75rem;
+  }
+}
+
 .location__btn:hover {
   background: none;
   color: #FFB619;
@@ -1538,7 +1558,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1555,7 +1575,7 @@ body {
   max-width: 73.125rem;
   margin: 0 auto;
   padding: 0 15px;
-  /* ------- Адаптивная верстка (при необхдимости раскомментировать)------------- */
+  /* ------- Адаптивная верстка (при необхдимости раскомментировать)-------------- */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

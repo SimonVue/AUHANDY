@@ -185,6 +185,7 @@ body
 		top: 50%
 		transform: rotate(45deg) translate(0px, 50%)
 
+// ======================= Promo ============================
 .promo
 	background: url('../img/bg_img.jpeg')center / cover no-repeat
 	padding: rem(118) 0
@@ -339,6 +340,7 @@ body
 	outline: 2px solid #f5a783 !important
 	border-radius: 3px
 
+// ======================= skill ============================
 .skill
 	position: relative
 
@@ -517,6 +519,7 @@ body
 
 		color: #666
 
+// ======================= Servises ============================
 .services
 	background: url(../img/bg-service.jpeg)
 	padding: rem(80) 0 rem(100)
@@ -616,6 +619,7 @@ body
 			background: none
 			border: 2px solid $orangeColor
 
+// ======================= Project ============================
 .project
 	.wrapper
 		@include wrapPosition
@@ -784,6 +788,7 @@ body
 			background: none
 			@include colorBorder
 
+// ======================= Anypromlem ==========================
 .anyproblem
 	background: url(../img/bg-service.jpeg)center / cover no-repeat
 	padding: calc(110px + (176 - 110) * ((100vw - 320px) / (1170 - 320))) 0
@@ -831,6 +836,7 @@ body
 			i
 				margin-right: rem(10)
 
+// ======================= Location ============================
 .location
 	background: url('../img/skill-bg.jpeg')center / cover no-repeat
 
@@ -843,7 +849,7 @@ body
 
 		@media(max-width: rem(767))
 			flex-direction: column-reverse
-			max-width: 80%
+			max-width: 100%
 			margin: 0 auto
 
 	&__title
@@ -864,6 +870,8 @@ body
 			margin-bottom: rem(42)
 		@media(max-width: rem(767))
 			text-align: center
+			display: inline-block
+			font-size: rem(24)
 
 	&__place
 		width: 100%
@@ -875,6 +883,8 @@ body
 
 		@media(max-width: rem(1025))
 			width: calc(250px + (450 - 250) * ((100vw - 320px) / (1170 - 320)))
+		@media(max-width: rem(767))
+			width: 100%
 
 	&__form
 		display: flex
@@ -925,6 +935,9 @@ body
 		&:hover
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
+		@media(max-width: rem(767))
+			margin-bottom: rem(15)
+
 	&__btn
 		width: rem(131)
 		height: rem(50)
@@ -936,6 +949,9 @@ body
 		cursor: pointer
 		transition: .2s
 		@include backgroundBorder
+		@media(max-width: rem(767))
+			margin-bottom: rem(60)
+
 		&:hover
 			background: none
 			@include colorBorder
