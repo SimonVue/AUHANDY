@@ -1592,6 +1592,9 @@ body {
 
 @media (max-width: 64.1875rem) {
   .footer .wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 1.875rem;
@@ -1599,7 +1602,7 @@ body {
   }
 }
 
-@media (max-width: 63.9375rem) {
+@media (max-width: 64.1875rem) {
   .footer__contacts, .footer__services {
     margin: 0 auto;
   }
@@ -1613,7 +1616,7 @@ body {
   margin: 0 0 2rem 0;
 }
 
-@media (max-width: 63.9375rem) {
+@media (max-width: 39.375rem) {
   .footer__title {
     text-align: center;
   }
@@ -1683,11 +1686,16 @@ body {
   gap: 0.9375rem;
 }
 
+@media (max-width: 64.1875rem) {
+  .footer .footer__lists {
+    height: 100%;
+  }
+}
+
 @media (max-width: 47.9375rem) {
   .footer .footer__lists {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 100%;
     max-height: 13.75rem;
   }
 }
@@ -1728,7 +1736,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 63.9375rem) {
+@media (max-width: 64.1875rem) {
   .footer__coupon {
     margin: 0 auto 1.875rem;
   }

@@ -982,13 +982,14 @@ body
 		justify-content: space-between
 		gap: rem(10);
 		@media(max-width: rem(1027))
+			justify-content: center
 			flex-wrap: wrap
 			gap: rem(30)
 			font-size: rem(14)
 
 	&__contacts,
 	&__services
-		@media(max-width: rem(1023))
+		@media(max-width: rem(1027))
 			margin: 0 auto
 
 	&__title
@@ -997,7 +998,7 @@ body
 		text-transform: uppercase
 		color: $mainColor
 		margin: 0 0 rem(32) 0
-		@media(max-width: rem(1023))
+		@media(max-width: rem(630))
 			text-align: center
 
 	&__list-services
@@ -1041,9 +1042,12 @@ body
 		max-width: rem(346)
 		height: rem(380)
 		gap: rem(15)
+		@media(max-width: rem(1027))
+			height: 100%
+
 		@media(max-width: rem(767))
 			flex-wrap: wrap
-			height: 100%
+
 			max-height: rem(220)
 
 	.footer__link
@@ -1069,7 +1073,7 @@ body
 		border: 2px dashed #404040
 		padding: rem(30) rem(10)
 		text-align: center
-		@media(max-width: rem(1023))
+		@media(max-width: rem(1027))
 			margin: 0 auto rem(30)
 
 	&__number
