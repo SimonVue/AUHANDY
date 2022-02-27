@@ -1276,7 +1276,7 @@ body {
 }
 
 .anyproblem {
-  background: url(../img/bg-service.jpeg) center/cover no-repeat;
+  background: url(../img/flat-rescue.jpeg) center/cover no-repeat;
   padding: calc(50px + (176 - 50) * ((100vw - 320px) / (1170 - 320))) 0;
 }
 
