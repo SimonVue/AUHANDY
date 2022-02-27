@@ -25,12 +25,13 @@ function open() {
 
 }
 
-/* ========================= validation ======================== */
+/* ========================= validation popup form ======================== */
 function validation() {
-  const formElem = document.querySelector('#form');
+  const formElem = document.querySelector('.promo__form');
   console.log(formElem);
-  const formInputs = formElem.querySelectorAll('.input');
-  const formButton = formElem.querySelector('.button')
+  const formInputs = formElem.querySelectorAll('input');
+  console.log(formInputs);
+  // const formButton = formElem.querySelector('.button')
   formElem.addEventListener('click', e => {
     formInputs.forEach(formInput => {
       if (formInput.value === '') {
@@ -40,8 +41,16 @@ function validation() {
     });
   });
 
+  formElem.addEventListener('click', e => {
+    formInputs.forEach(formInput => {
+      if (formInput.value !== '') {
+        formInput.classList.remove('error')
+      }
+    });
+  });
+
   formElem.addEventListener('input', e => {
-    if (!e.target.classList.contains('.input')) {
+    if (!e.target.classList.contains('input')) {
       return;
     }
     e.target.value === ''
@@ -52,3 +61,40 @@ function validation() {
 }
 validation();
 
+
+
+/* ========================= validation location form ======================== */
+function locationValidation() {
+  const locationElem = document.querySelector('.location__form');
+  console.log(locationElem);
+  const locationInputs = locationElem.querySelectorAll('input');
+  console.log(locationInputs);
+  // const formButton = formElem.querySelector('.button')
+  locationElem.addEventListener('click', e => {
+    locationInputs.forEach(locationInput => {
+      if (locationInput.value === '') {
+        locationInput.classList.add('error')
+        e.preventDefault();
+      }
+    });
+  });
+
+  locationElem.addEventListener('click', e => {
+    locationInputs.forEach(locationInput => {
+      if (locationInput.value !== '') {
+        locationInput.classList.remove('error')
+      }
+    });
+  });
+
+  locationElem.addEventListener('input', e => {
+    if (!e.target.classList.contains('input')) {
+      return;
+    }
+    e.target.value === ''
+      ? e.target.classList.add('error')
+      : e.target.classList.remove('error');
+  });
+
+}
+locationValidation();

@@ -477,9 +477,14 @@ body {
   height: 3.125rem;
   padding: 1.25rem;
   border: none;
+  outline: none;
+  border-radius: 2px;
   margin-top: 0.9375rem;
-  -webkit-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
-          box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
+}
+
+.promo .promo__form .form__input:hover {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(50, 50, 50, 0.3);
+          box-shadow: 1px 1px 10px 0px rgba(50, 50, 50, 0.3);
 }
 
 @media (max-width: 22.5rem) {
@@ -492,7 +497,7 @@ body {
   display: block;
   width: 8.1875rem;
   height: 3.125rem;
-  color: #cccc;
+  color: #ffffff;
   font-weight: bold;
   background: #FFB619;
   border: 2px solid #FFB619;
@@ -502,8 +507,8 @@ body {
   overflow: hidden;
   -webkit-animation-name: animate;
           animation-name: animate;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   cursor: pointer;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -1472,7 +1477,6 @@ body {
 }
 
 .location__input:valid {
-  border: 2px solid #a0cda9;
   border-radius: 3px;
 }
 
