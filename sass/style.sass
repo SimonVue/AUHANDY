@@ -182,7 +182,7 @@ body
 
 	&::after
 		background: #ddd
-		top: 50%
+		top: 45%
 		transform: rotate(45deg) translate(0px, 50%)
 
 // ======================= Promo ============================
@@ -982,6 +982,16 @@ body
 		@include wrapPosition
 		display: flex
 		justify-content: space-between
+		gap: rem(10);
+		@media(max-width: rem(1023))
+			flex-wrap: wrap
+			gap: 	25px
+			font-size: rem(14)
+
+	&__contacts,
+	&__services
+		@media(max-width: rem(1023))
+			margin: 0 auto
 
 	&__title
 		font-weight: bold
@@ -989,10 +999,16 @@ body
 		text-transform: uppercase
 		color: #CCC
 		margin: 0 0 rem(32) 0
+		@media(max-width: rem(1023))
+			text-align: center
 
-	ul
-		padding: 0
-		margin: 0
+	&__list-services
+		@media(max-width: rem(767))
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 0
+			margin: 0
 
 	li
 		line-height: rem(22)
@@ -1024,16 +1040,22 @@ body
 	.footer__lists
 		display: flex
 		justify-content: space-between
-		flex-wrap: wrap
-		width: rem(346)
+		max-width: rem(346)
 		height: rem(380)
+		gap: 15px
+		@media(max-width: rem(767))
+			flex-wrap: wrap
+			height: 100%
+			max-height: rem(220)
 
 	.footer__link
-		margin-bottom: rem(15)
+		margin-bottom: rem(18)
 
 		i
 			margin-right: rem(20)
 			color: $orangeColor
+			@media(max-width: rem(374))
+				margin-right: 10px
 
 		a
 			color: #999
@@ -1045,15 +1067,18 @@ body
 
 	&__coupon
 		width: rem(370)
-		height: rem(220)
+		height: 100%
 		border: 2px dashed #404040
+		padding: rem(30) rem(10)
 		text-align: center
+		@media(max-width: rem(1023))
+			margin: 0 auto
 
 	&__number
 		font-weight: bold
 		color: #CCC
 		text-transform: uppercase
-		margin-top: rem(35)
+		//margin-top: rem(35)
 
 		span
 			font-weight: 900
@@ -1080,6 +1105,8 @@ body
 	text-align: center
 	color: #666
 	margin: 0
+	@media(max-width: rem(427))
+		font-size: rem(14)
 
 	span
 		color: $orangeColor
