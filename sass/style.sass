@@ -1,4 +1,4 @@
-@import mixin.sass
+@import "_mixin"
 
 *
 	box-sizing: border-box
@@ -9,9 +9,6 @@ html
 	scroll-behavior: smooth
 
 body
-	display: flex
-	flex-direction: column
-
 	font-family: 'Lato', sans-serif
 	font-size: rem(16)
 	line-height: rem(24)
@@ -29,19 +26,19 @@ body
 		justify-content: space-between
 
 	&__text
-		color: #666
+		color: $darkGreyColor
 
-		@media ( max-width:	424px)
+		@media ( max-width: rem(424))
 			font-size: rem(12)
 
 	&__link
 		margin-left: rem(20)
-		color: #666
+		color: $darkGreyColor
 		cursor: pointer
 		transition: .2s
 		&:hover
 			color: $orangeColor
-		@media ( max-width:	424px)
+		@media ( max-width:	rem(424))
 			margin-left: rem(10)
 
 .header
@@ -58,12 +55,12 @@ body
 			align-items: center
 
 			.logo
-				@media ( max-width:	686px)
+				@media ( max-width:	rem(686))
 					width: 90%
 					vertical-align: bottom
 
 			&__menu
-				@media ( max-width:	686px)
+				@media ( max-width:	rem(686))
 					display: flex
 					flex-direction: column
 					width: 100%
@@ -85,8 +82,9 @@ body
 					display: inline-block
 					text-decoration: none
 					margin-left: rem(40)
-					color: #333
-					padding-bottom: 3px
+					color: $blackColor
+					padding-bottom: rem(3);
+
 					font-weight: bold
 					text-transform: uppercase
 					cursor: pointer
@@ -97,12 +95,13 @@ body
 						content: ' '
 						display: block
 						width: 100%
-						height: 2px
+						height: rem(2);
+
 						background: $orangeColor
 						position: absolute
 						bottom: 0
 						left: -100%
-						@media(max-width: 686px)
+						@media(max-width: rem(686))
 							width: calc(100% - 50% )
 
 					&:hover
@@ -110,10 +109,10 @@ body
 						&::after
 							left: 0
 
-					@media ( max-width:	905px)
+					@media ( max-width:	rem(905))
 						margin-left: rem(20)
 						font-size: rem(12)
-					@media ( max-width:	686px)
+					@media ( max-width:	rem(686))
 						color: #ddd
 						font-size: rem(18)
 						letter-spacing: 1.8px
@@ -123,7 +122,7 @@ body
 				&_item:last-child
 					margin-left: rem(25)
 
-				@media (max-width: 686px)
+				@media (max-width: rem(905))
 					top: 0
 					right: -100%
 
@@ -133,11 +132,11 @@ body
 ._lock
 	overflow: hidden
 
-// ======================= Burger ============================
+// ======================= Burger =============================
 .menu-burger
 	display: none
 
-	@media(max-width: 686px)
+	@media(max-width: rem(686))
 		display: block
 		position: relative
 		width: rem(30)
@@ -150,10 +149,11 @@ body
 	&::after
 		left: 0
 		position: absolute
-		height: 3px
+		height: rem(3);
+
 		width: 100%
 		transition: all 0.3s ease 0s
-		background: #333333
+		background: $blackColor
 
 	&::before,
 	&::after
@@ -185,7 +185,7 @@ body
 		top: 45%
 		transform: rotate(45deg) translate(0px, 50%)
 
-// ======================= Promo ============================
+// ======================== Promo =============================
 .promo
 	background: url('../img/bg_img.jpeg')center / cover no-repeat
 	padding: rem(118) 0
@@ -203,11 +203,11 @@ body
 		align-items: center
 		gap: rem(50)
 
-		@media(max-width: 720px)
+		@media(max-width: rem(720))
 			display: block
 			text-align: center
 			width: 90%
-		@media(max-width: 430px)
+		@media(max-width: rem(430))
 			width: 100%
 
 	&__img
@@ -215,25 +215,25 @@ body
 		height: 100%
 
 	.promo__block
-		color: #fff
-		@media(max-width: 490px)
+		color: $whiteColor
+		@media(max-width: rem(490))
 			margin: 0 auto
 
 	&__title
 		font-weight: bold
 		font-size: rem(39)
-		line-height: 50px
+		line-height: rem(50);
 		letter-spacing: 2px
 		margin: 0 0 rem(20) 0
-		@media(max-width: 1030px)
+		@media(max-width: rem(1030))
 			font-size: rem(35)
-			@media(max-width: 430px)
+			@media(max-width: rem(430))
 				font-size: rem(30)
 
 	&__text
 		font-size: rem(18)
 		line-height: rem(28)
-		color: #ccc
+		color: $mainColor
 		margin: 0 0 rem(40) 0
 
 	&__btn
@@ -242,14 +242,14 @@ body
 		height: rem(50)
 		font-weight: bold
 		text-transform: uppercase
-		color: #FFFFFF
+		color: $whiteColor
 		cursor: pointer
 		transition: .2s
 		&:hover
-			background: #fff
+			background: $whiteColor
 			color: $orangeColor
-			border: 2px solid #fff
-		@media(max-width: 490px)
+			border: 2px solid $whiteColor
+		@media(max-width: rem(490))
 			display: block
 			margin: 0 auto
 
@@ -259,19 +259,19 @@ body
 		border: transparent
 		margin-right: rem(15)
 
-		@media(max-width: 490px)
+		@media(max-width: rem(490))
 			display: block
 			margin: 0 auto
 
 			margin-bottom: rem(15)
 
 		&:hover
-			background: #fff
+			background: $whiteColor
 			color: $orangeColor
 
 	&__btn-quote
 		background: none
-		border: 2px solid #fff
+		border: 2px solid $whiteColor
 
 	.promo__form
 		position: absolute
@@ -289,10 +289,10 @@ body
 		opacity: 1
 		animation-name: animatetop
 		animation-duration: 0.4s
-		@media(max-width: 360px)
+		@media(max-width: rem(360))
 			width: 100%
 
-		@keyframes "animatetop"
+		@keyframes "animatetop" // анимация формы popup
 			from
 				top: 30%
 				opacity: 0
@@ -314,14 +314,14 @@ body
 			border: none
 			margin-top: rem(15)
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
-			@media(max-width: 360px)
+			@media(max-width: rem(360))
 				width: 75%
 
 		.form__btn
 			display: block
 			width: rem(131)
 			height: rem(50)
-			color: #fff
+			color: $mainColor
 			font-weight: bold
 			@include backgroundBorder
 			margin: 0 auto
@@ -338,9 +338,9 @@ body
 
 .error
 	outline: 2px solid #f5a783 !important
-	border-radius: 3px
+	border-radius: rem(3)
 
-// ======================= skill ============================
+// ======================== skill =============================
 .skill
 	position: relative
 
@@ -353,9 +353,9 @@ body
 		justify-content: space-between
 		padding: rem(50) rem(15)
 		align-items: center
-		@media(max-width: 720px)
+		@media(max-width: rem(720))
 			padding: rem(26) rem(15)
-			@media(max-width: 535px)
+			@media(max-width: rem(535))
 				flex-direction: column
 
 		&__sup-info
@@ -370,20 +370,20 @@ body
 			height: rem(150)
 			background: url('../img/skill-bg.jpeg')center / cover no-repeat
 			z-index: -1
-			@media(max-width: 720px)
+			@media(max-width: rem(720))
 				height: rem(100)
-			@media(max-width: 535px)
+			@media(max-width: rem(535))
 				height: rem(140)
 
 		.skill__sup-text
 			font-weight: bold
 			font-size: rem(24)
 			line-height: rem(22)
-			color: #333333
+			color: $blackColor
 			margin: 0
-			@media(max-width: 720px)
+			@media(max-width: rem(720))
 				font-size: rem(14)
-			@media(max-width: 535px)
+			@media(max-width: rem(535))
 				margin-bottom: rem(15)
 
 		.skill__btn
@@ -391,17 +391,17 @@ body
 			line-height: rem(18)
 			text-transform: uppercase
 			text-decoration: none
-			color: #fff
+			color: $whiteColor
 			padding: rem(13) rem(19)
 			cursor: pointer
 			transition: .2s
 			@include backgroundBorder
-			@media(max-width: 720px)
+			@media(max-width: rem(720))
 				font-size: rem(14)
-			@media(max-width: 535px)
+			@media(max-width: rem(535))
 				padding: rem(13) rem(12)
 			&:hover
-				background: #fff
+				background: $whiteColor
 				@include colorBorder
 
 			i
@@ -442,7 +442,7 @@ body
 		font-weight: 900
 		font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1170 - 320)))
 		text-transform: uppercase
-		color: #333333
+		color: $blackColor
 		padding: rem(19) 0
 
 		@media(max-width: rem(720))
@@ -456,7 +456,7 @@ body
 			border-bottom: 3px solid $blueColor
 
 	.skill__descr
-		color: #666
+		color: $darkGreyColor
 		font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1170 - 320)))
 		line-height: calc(16px + (24 - 16) * ((100vw - 320px) / (1170 - 320)))
 		margin: 0 0 rem(39) 0
@@ -508,18 +508,18 @@ body
 	.skill__title
 		font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1170 - 320)))
 		font-weight: bold
-		color: #333
+		color: $blackColor
 		margin: 0 0 rem(7) 0
-		@media(max-width: 1023px)
+		@media(max-width: rem(1023))
 			margin: 0
 
 	.skill__text
 		font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (1170 - 320)))
 		line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)))
 
-		color: #666
+		color: $darkGreyColor
 
-// ======================= Servises ============================
+// ======================= Servises ===========================
 .services
 	background: url(../img/bg-service.jpeg)
 	padding: rem(80) 0 rem(100)
@@ -555,7 +555,7 @@ body
 		@media(max-width: rem(590))
 			justify-content: center
 			flex-wrap: wrap
-			gap: rem(20);
+			gap: rem(20)
 
 			padding: rem(50) 0
 
@@ -599,16 +599,16 @@ body
 		font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
 		margin: 0
 		margin-bottom: rem(13)
-		color: #fff
+		color: $whiteColor
 
 	&__text
 		font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)))
 		line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
-		color: #CCC
+		color: $mainColor
 
 	&__btn
 		display: inline-block
-		color: #fff
+		color: $whiteColor
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
@@ -629,7 +629,7 @@ body
 		font-weight: 900
 		font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)))
 		text-align: center
-		color: #333
+		color: $blackColor
 		text-transform: uppercase
 		margin: 0
 		&::after
@@ -654,7 +654,7 @@ body
 
 	&__link
 		font-weight: bold
-		color: #666
+		color: $darkGreyColor
 		text-decoration: none
 		margin: 0 rem(15)
 		transition: .2s
@@ -674,10 +674,10 @@ body
 		margin-bottom: rem(50)
 
 		@media(max-width: rem(426))
-			gap: 3px
+			gap: rem(3)
 
 		@media(max-width: rem(430))
-			gap: 15px
+			gap: rem(15)
 
 	.project__picture-1
 		background: url('../img/project_jmg-1.jpeg')center / cover no-repeat
@@ -707,7 +707,7 @@ body
 		@media(max-width: rem(430))
 			margin: 0 auto
 			width: 80%
-			height: 130px
+			height: rem(130)
 
 		.project__overlay
 			position: absolute
@@ -728,7 +728,7 @@ body
 				height: calc(90px + (292 - 90) * ((100vw - 320px) / (1170 - 320)))
 
 			@media(max-width: rem(430))
-				height: 130px
+				height: rem(130)
 
 			.project__name
 				font-weight: bold
@@ -746,7 +746,7 @@ body
 
 			.project__subname
 				text-align: center
-				color: #CCC
+				color: $mainColor
 				margin: 0 0 rem(17) 0
 				@media(max-width: rem(1200))
 					font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1170 - 320)))
@@ -758,26 +758,26 @@ body
 
 			.project__search
 				display: block
-				width: 25px
+				width: rem(25)
 				text-align: center
 				margin: 0 auto
 
 				a
-					color: #fff
+					color: $whiteColor
 
 				@media(max-width: rem(660))
 					display: none
 
 				@media(max-width: rem(430))
 					display: block
-					width: 25px
+					width: rem(25)
 
 	.project__btn
 		text-align: center
 		display: block
 		width: rem(170)
 		height: rem(50)
-		color: #fff
+		color: $whiteColor
 		margin: 0 auto
 		@include backgroundBorder
 		text-transform: uppercase
@@ -788,7 +788,7 @@ body
 			background: none
 			@include colorBorder
 
-// ======================= Anypromlem ==========================
+// ======================= Anypromlem =========================
 .anyproblem
 	background: url(../img/bg-service.jpeg)center / cover no-repeat
 	padding: calc(50px + (176 - 50) * ((100vw - 320px) / (1170 - 320))) 0
@@ -801,7 +801,7 @@ body
 			font-weight: bold
 			font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1170 - 320)))
 			line-height: calc(40px + (52 - 40) * ((100vw - 320px) / (1170 - 320)))
-			color: #fff
+			color: $whiteColor
 			letter-spacing: 1.3px
 			text-transform: uppercase
 			margin: 0 0 rem(32) 0
@@ -829,14 +829,14 @@ body
 				line-height: rem(18)
 				text-transform: uppercase
 				text-decoration: none
-				color: #fff
+				color: $whiteColor
 				&:hover
 					color: $orangeColor
 
 			i
 				margin-right: rem(10)
 
-// ======================= Location ============================
+// ======================= Location ===========================
 .location
 	background: url('../img/skill-bg.jpeg')center / cover no-repeat
 
@@ -859,7 +859,7 @@ body
 		font-size: rem(30)
 		text-transform: uppercase
 		margin: 0 0 rem(55) 0
-		color: #333
+		color: $blackColor
 		&::after
 			position: absolute
 			content: ""
@@ -878,7 +878,6 @@ body
 		width: 100%
 		width: rem(482)
 		height: auto
-		//margin-right: rem(61)
 		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 		overflow: hidden
 
@@ -891,30 +890,28 @@ body
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		row-gap: 10px
+		row-gap: rem(10)
 		@media(max-width: rem(767))
 			gap: 10px
 			justify-content: space-between
 		@media(max-width: rem(460))
 			flex-direction: column
-			gap: 15px
+			gap: rem(15)
 
 	&__input
-		max-width: 302px
+		max-width: rem(302)
 		width: 49%
-		//width: calc(84px + (271 - 100) * ((100vw - 320px) / (1170 - 320)))
-		//width: rem(310)
 		height: rem(50)
-		//margin-bottom: 20px
 		padding: 0 rem(22)
 		border: none
-		color: #666
+		outline: none
+		color: $darkGreyColor
 		&:hover
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
 		&:valid
-			border: 3px solid #d7fbdf
-
+			border: 2px solid #a0cda9
+			border-radius: 3px
 		@media(max-width: rem(767))
 			max-width: 48%
 		@media(max-width: rem(460))
@@ -923,16 +920,15 @@ body
 			margin: 0 auto
 
 	&__area
-		//width: calc(360px + (637 - 360) * ((100vw - 320px) / (1170 - 320)))
 		width: 100%
-		//width: rem(637)
 		height: rem(127)
 		margin-bottom: rem(35)
 		padding: rem(13) rem(22)
 		border: none
+		outline: none
 		font-family: 'Lato', sans-serif
 		font-size: rem(16)
-		color: #666
+		color: $darkGreyColor
 		&:hover
 			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
 
@@ -942,7 +938,7 @@ body
 	&__btn
 		width: rem(131)
 		height: rem(50)
-		color: #fff
+		color: $whiteColor
 		font-weight: bold
 		text-transform: uppercase
 		padding: rem(13) 0
@@ -957,7 +953,7 @@ body
 			background: none
 			@include colorBorder
 
-// ======================= Stamp ============================
+// ======================== Stamp =============================
 .stamp
 	padding: rem(55) 0
 	@media(max-width: rem(427))
@@ -967,13 +963,13 @@ body
 		@include wrapPosition
 		display: flex
 		justify-content: space-around
-		gap: 10px
+		gap: rem(10)
 
 		img
 			width: calc(60px + (110 - 60) * ((100vw - 320px) / (1170 - 320)))
 			height: auto
 
-// ======================= Footer ============================
+// ======================= Footer =============================
 .footer
 	background: #1A1A1A
 	padding-top: rem(57)
@@ -983,9 +979,9 @@ body
 		display: flex
 		justify-content: space-between
 		gap: rem(10);
-		@media(max-width: rem(1023))
+		@media(max-width: rem(1027))
 			flex-wrap: wrap
-			gap: 	25px
+			gap: rem(30)
 			font-size: rem(14)
 
 	&__contacts,
@@ -997,7 +993,7 @@ body
 		font-weight: bold
 		font-size: rem(18)
 		text-transform: uppercase
-		color: #CCC
+		color: $mainColor
 		margin: 0 0 rem(32) 0
 		@media(max-width: rem(1023))
 			text-align: center
@@ -1012,7 +1008,7 @@ body
 
 	li
 		line-height: rem(22)
-		color: #999
+		color: $footerColor
 		list-style: none
 
 	&__contact-info
@@ -1034,15 +1030,15 @@ body
 		display: flex
 		span
 			font-weight: bold
-			font-size: 18px
-			color: #ccc
+			font-size: rem(18)
+			color: $mainColor
 
 	.footer__lists
 		display: flex
 		justify-content: space-between
 		max-width: rem(346)
 		height: rem(380)
-		gap: 15px
+		gap: rem(15)
 		@media(max-width: rem(767))
 			flex-wrap: wrap
 			height: 100%
@@ -1055,10 +1051,10 @@ body
 			margin-right: rem(20)
 			color: $orangeColor
 			@media(max-width: rem(374))
-				margin-right: 10px
+				margin-right: rem(10)
 
 		a
-			color: #999
+			color: $footerColor
 			text-decoration: none
 			cursor: pointer
 			transition: .2s
@@ -1072,13 +1068,12 @@ body
 		padding: rem(30) rem(10)
 		text-align: center
 		@media(max-width: rem(1023))
-			margin: 0 auto
+			margin: 0 auto rem(30)
 
 	&__number
 		font-weight: bold
-		color: #CCC
+		color: $mainColor
 		text-transform: uppercase
-		//margin-top: rem(35)
 
 		span
 			font-weight: 900
@@ -1090,11 +1085,11 @@ body
 	&__subnumber
 		font-weight: bold
 		font-size: rem(18)
-		color: #CCC
+		color: $mainColor
 		margin-bottom: rem(50)
 
 	&__code
-		color: #CCC
+		color: $mainColor
 		span
 			color: $orangeColor
 
@@ -1103,7 +1098,7 @@ body
 	padding: rem(19) 0
 	background: #0D0D0D
 	text-align: center
-	color: #666
+	color: $darkGreyColor
 	margin: 0
 	@media(max-width: rem(427))
 		font-size: rem(14)
