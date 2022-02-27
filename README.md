@@ -1,3 +1,3 @@
-# AUHANDY
+# Handyman
 
-Посмотреть сайт: https://simonvue.github.io/AUHANDY/
+Посмотреть сайт: https://simonvue.github.io/HandyMan/
