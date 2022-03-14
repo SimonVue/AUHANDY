@@ -1,336 +1,511 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="google" content="notranslate" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/741c36085d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>HANDYMAN</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="google" content="notranslate">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/741c36085d.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/style.css">
-	<title>HANDYMAN</title>
-</head>
+  <body class="content notranslate">
+    <!------------------- supheader ---------------------->
+    <div class="supheader">
+      <div class="wrapper">
+        <p class="supheader__text">We make your Home more quality.</p>
+        <div class="supheader__social">
+          <a href="https://facebook.com" class="supheader__link" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com" class="supheader__link" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://google.com" class="supheader__link" target="_blank"
+            ><i class="fab fa-google-plus-g"></i
+          ></a>
+          <a
+            href="https://instagram.com"
+            class="supheader__link"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
 
-<body class="content notranslate">
+    <!-------------------- header ------------------------>
+    <header class="header">
+      <div class="wrapper">
+        <nav class="nav">
+          <a href="#" class="nav__logo"
+            ><img src="img/Logo.jpeg" alt="logo" class="logo"
+          /></a>
+          <div class="nav__menu" id="nav-menu">
+            <a href="#" class="nav__menu_item">Home</a>
+            <a href="#" class="nav__menu_item">Services</a>
+            <a href="#" class="nav__menu_item">Projects</a>
+            <a href="#" class="nav__menu_item">Pages</a>
+            <a href="#" class="nav__menu_item">Blog</a>
+            <a href="#" class="nav__menu_item">Contact</a>
+            <a href="#" class="nav__menu_item"
+              ><span><i class="fas fa-search"></i></span
+            ></a>
+          </div>
+          <div class="menu-burger">
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-	<!------------------- supheader ---------------------->
-	<div class="supheader">
-		<div class="wrapper">
-			<p class="supheader__text">We make your home more quality.</p>
-			<div class="supheader__social">
-				<a href="https://facebook.com" class="supheader__link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-				<a href="https://twitter.com" class="supheader__link" target="_blank"><i class="fab fa-twitter"></i></a>
-				<a href="https://google.com" class="supheader__link" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-				<a href="https://instagram.com" class="supheader__link" target="_blank"><i class="fab fa-instagram"></i></a>
-			</div>
-		</div>
-	</div>
+    <main class="content">
+      <!-------------------- promo ----------------------->
+      <section class="promo">
+        <div class="wrapper promo__wrapper">
+          <img src="img/promo_man.jpeg" alt="img" class="promo__img" />
+          <div class="promo__block">
+            <h1 class="promo__title">Expert Handyman & Remodeling</h1>
+            <p class="promo__text">
+              Professional service "Handyman" offers services for household
+              repairs of any complexity
+            </p>
+            <button
+              type="button"
+              id="learn"
+              class="promo__btn promo__btn-learn"
+            >
+              Learn More
+            </button>
+            <button type="button" class="promo__btn promo__btn-quote">
+              Get A Quote
+            </button>
+            <form action="#" id="form" class="promo__form" name="submit">
+              <div class="form-close"><i class="fas fa-times"></i></div>
+              <input
+                type="text"
+                class="form__input input"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                class="form__input input"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="number"
+                class="form__input input"
+                name="tel"
+                placeholder="+7 (999) 99-99-99"
+                required
+              />
+              <button class="form__btn button">submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-	<!-------------------- header ------------------------>
-	<header class="header">
-		<div class="wrapper">
-			<nav class="nav">
-				<a href="#" class="nav__logo"><img src="img/Logo.jpeg" alt="logo" class="logo"></a>
-				<div class="nav__menu" id="nav-menu">
-					<a href="#" class="nav__menu_item">Home</a>
-					<a href="#" class="nav__menu_item">Services</a>
-					<a href="#" class="nav__menu_item">Projects</a>
-					<a href="#" class="nav__menu_item">Pages</a>
-					<a href="#" class="nav__menu_item">Blog</a>
-					<a href="#" class="nav__menu_item">Contact</a>
-					<a href="#" class="nav__menu_item"><span><i class="fas fa-search"></i></span></a>
-				</div>
-				<div class="menu-burger">
-					<span></span>
-				</div>
-			</nav>
-		</div>
-	</header>
+      <!-------------------- skill ----------------------->
+      <section class="skill">
+        <div class="skill__sup-info">
+          <div class="wrapper skill__sup-wrapper">
+            <div class="skill__bg"></div>
+            <p class="skill__sup-text">
+              We have 13 years of experience in Handyman.
+            </p>
+            <a href="tel:+7 (999) 99-99-99" class="skill__btn"
+              ><i class="fas fa-mobile-alt"></i>+7 (999) 99-99-99</a
+            >
+          </div>
+        </div>
+        <div class="wrapper skill__wrapper">
+          <h2 class="skill__topic">Why Choose Us</h2>
+          <p class="skill__descr">
+            The Handyman service is known for its responsible attitude to its
+            work. Our craftsmen calculate the algorithm for performing the
+            service down to the smallest nuances, including the features of the
+            selection of building materials depending on humidity, temperature
+            and even wind roses.
+          </p>
+          <div class="skill__info">
+            <div class="skill__img">
+              <img src="img/skill-img.jpeg" alt="img" />
+            </div>
 
-	<main class="content">
+            <div class="skill__items">
+              <div class="skill__item">
+                <img src="img/icon_1.svg" alt="img" class="skill__icon" />
+                <div class="skill__item-info">
+                  <h3 class="skill__title">The best works.</h3>
+                  <p class="skill__text">
+                    We employ only professional craftsmen who know their
+                    business perfectly.
+                  </p>
+                </div>
+              </div>
+              <div class="skill__item">
+                <img src="img/icon_2.svg" alt="img" class="skill__icon" />
+                <div class="skill__item-info">
+                  <h3 class="skill__title">Easy To Customize.</h3>
+                  <p class="skill__text">
+                    The repairman will complete the work by the day specified in
+                    the contract
+                  </p>
+                </div>
+              </div>
+              <div class="skill__item">
+                <img src="img/icon_3.svg" alt="img" class="skill__icon" />
+                <div class="skill__item-info">
+                  <h3 class="skill__title">Our 2 Years Warranties</h3>
+                  <p class="skill__text">
+                    Warranties for all types of services - up to 1 year,
+                    depending on the specific tasks;
+                  </p>
+                </div>
+              </div>
+              <div class="skill__item">
+                <img src="img/icon_4.svg" alt="img" class="skill__icon" />
+                <div class="skill__item-info">
+                  <h3 class="skill__title">Faster Services.</h3>
+                  <p class="skill__text">
+                    Worthy service - we work quickly, without smokers and
+                    telephone conversations, always We remove trash behind you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<!-------------------- promo ----------------------->
-		<section class="promo">
-			<div class="wrapper promo__wrapper">
-				<img src="img/promo_man.jpeg" alt="img" class="promo__img">
-				<div class="promo__block">
-					<h1 class="promo__title">Expert Handyman & Remodeling</h1>
-					<p class="promo__text">Professional service "Handyman" offers services for household repairs of any
-						complexity</p>
-					<button type="button" id="learn" class="promo__btn promo__btn-learn">Learn More</button>
-					<button type="button" class="promo__btn promo__btn-quote">Get A Quote</button>
-					<form action="#" id="form" class="promo__form" name="submit">
-						<div class="form-close"><i class="fas fa-times"></i></div>
-						<input type="text" class="form__input input" name="name" placeholder="Name" required>
-						<input type="email" class="form__input input" name="email" placeholder="Email" required>
-						<input type="number" class="form__input input" name="tel" placeholder="+7 (999) 99-99-99" required>
-						<button class="form__btn button">submit</button>
-					</form>
-				</div>
-			</div>
-		</section>
+      <!------------------- services --------------------->
+      <section class="services">
+        <div class="wrapper">
+          <h2 class="services__title">Our Services</h2>
+          <div class="services__block">
+            <div class="services__proff">
+              <a href="#" class="services__link"
+                ><img
+                  src="img/serv-icon-1.svg"
+                  alt="img"
+                  class="services__icon"
+                />
+                <h3 class="services__name">Engine Repairs</h3>
+                <p class="services__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </a>
+            </div>
+            <div class="services__proff">
+              <a href="#" class="services__link"
+                ><img
+                  src="img/serv-icon-2.svg"
+                  alt="img"
+                  class="services__icon"
+                />
+                <h3 class="services__name">Electrical</h3>
+                <p class="services__text">
+                  Donec malesuada, purus a viverra sodales leo purus lobortis
+                </p>
+              </a>
+            </div>
+            <div class="services__proff">
+              <a href="#" class="services__link"
+                ><img
+                  src="img/serv-icon-3.svg"
+                  alt="img"
+                  class="services__icon"
+                />
+                <h3 class="services__name">Plumbing</h3>
+                <p class="services__text">
+                  Praesent dignissim mattis mauris. Sed finibus elementu.
+                </p>
+              </a>
+            </div>
+            <div class="services__proff">
+              <a href="#" class="services__link"
+                ><img
+                  src="img/serv-icon-4.svg"
+                  alt="img"
+                  class="services__icon"
+                />
+                <h3 class="services__name">Repair House</h3>
+                <p class="services__text">
+                  Phasellus venenatis mauris eget isque tincidunt
+                </p>
+              </a>
+            </div>
+          </div>
+          <a href="#" class="services__btn">View All Services</a>
+        </div>
+      </section>
 
-		<!-------------------- skill ----------------------->
-		<section class="skill">
-			<div class="skill__sup-info">
-				<div class="wrapper skill__sup-wrapper ">
-					<div class="skill__bg"></div>
-					<p class="skill__sup-text">We have 13 years of experience in Handyman.</p>
-					<a href="tel:+7 (999) 99-99-99" class="skill__btn"><i class="fas fa-mobile-alt"></i>+7 (999) 99-99-99</a>
-				</div>
-			</div>
-			<div class="wrapper skill__wrapper">
-				<h2 class="skill__topic">Why Choose Us</h2>
-				<p class="skill__descr">The Handyman service is known for its responsible attitude to its work. Our craftsmen
-					calculate the algorithm for performing the service down to the smallest nuances, including the features of
-					the selection of building materials depending on humidity, temperature and even wind roses.</p>
-				<div class="skill__info">
-					<div class="skill__img">
-						<img src="img/skill-img.jpeg" alt="img">
-					</div>
+      <!------------------- project ---------------------->
+      <section class="project">
+        <div class="wrapper">
+          <h2 class="project__title">our projects</h2>
+          <ul class="project__list">
+            <li><a href="#" class="project__link">all</a></li>
+            <li><a href="#" class="project__link">Engine Repair</a></li>
+            <li><a href="#" class="project__link">Electrical</a></li>
+            <li><a href="#" class="project__link">Plumbing</a></li>
+            <li><a href="#" class="project__link">Repair House</a></li>
+            <li><a href="#" class="project__link">Wall Paint</a></li>
+          </ul>
+          <div class="project__cards">
+            <div class="project__picture project__picture-1">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">Wall Paint</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project__picture project__picture-2">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">Electrical</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project__picture project__picture-3">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">Engine Repair</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project__picture project__picture-4">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">Plumbing</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project__picture project__picture-5">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">Repair House</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project__picture project__picture-6">
+              <div class="project__overlay">
+                <h3 class="project__name">Find out more in this catalog.</h3>
+                <p class="project__subname">All Projects</p>
+                <div class="project__search">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="project__btn">All projects</a>
+        </div>
+      </section>
 
-					<div class="skill__items">
-						<div class="skill__item">
-							<img src="img/icon_1.svg" alt="img" class="skill__icon">
-							<div class="skill__item-info">
-								<h3 class="skill__title">The best works.</h3>
-								<p class="skill__text">We employ only professional craftsmen who know their business perfectly.</p>
-							</div>
-						</div>
-						<div class="skill__item">
-							<img src="img/icon_2.svg" alt="img" class="skill__icon">
-							<div class="skill__item-info">
-								<h3 class="skill__title">Easy To Customize.</h3>
-								<p class="skill__text">The repairman will complete the work by the day specified in the contract</p>
-							</div>
-						</div>
-						<div class="skill__item">
-							<img src="img/icon_3.svg" alt="img" class="skill__icon">
-							<div class="skill__item-info">
-								<h3 class="skill__title">Our 2 Years Warranties</h3>
-								<p class="skill__text">Warranties for all types of services - up to 1 year, depending on the specific
-									tasks;</p>
-							</div>
-						</div>
-						<div class="skill__item">
-							<img src="img/icon_4.svg" alt="img" class="skill__icon">
-							<div class="skill__item-info">
-								<h3 class="skill__title">Faster Services.</h3>
-								<p class="skill__text">Worthy service - we work quickly, without smokers and telephone conversations,
-									always We remove trash behind you.</p>
-							</div>
-						</div>
-					</div>
+      <!------------------ anyproblem -------------------->
+      <section class="anyproblem">
+        <div class="wrapper">
+          <h2 class="anyproblem__title">You have some problems in housing?</h2>
+          <div class="anyproblem__btn">
+            <a href="tel:+7 (999) 99-99-99"
+              ><i class="fas fa-mobile-alt"></i>+7 (999)99-99-99</a
+            >
+          </div>
+        </div>
+      </section>
 
-				</div>
-			</div>
-		</section>
+      <!------------------- location --------------------->
+      <section class="location">
+        <div class="wrapper location__wrapper">
+          <div class="location__map">
+            <h2 class="location__title">Our Location</h2>
+            <div class="location__place">
+              <script
+                type="text/javascript"
+                charset="utf-8"
+                async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7883c895a9addd4368ce30ee79b1fb2b7c50783a82881564d5ce928ebf43958e&amp;width=100%25&amp;height=340&amp;lang=ru_RU&amp;scroll=true"
+              ></script>
+            </div>
+          </div>
+          <div class="location__quote">
+            <h2 class="location__title">Get A Quote</h2>
+            <form action="#" id="form" class="location__form">
+              <input
+                type="text"
+                name="name"
+                class="location__input input"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="text"
+                name="login"
+                class="location__input input"
+                placeholder="Your login"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                class="location__input input"
+                placeholder="Your Email"
+                required
+              />
+              <input
+                type="number"
+                name="password"
+                class="location__input input"
+                placeholder="Your Password"
+                required
+              />
+              <textarea
+                name="comment"
+                id=""
+                cols="30"
+                rows="10"
+                class="location__area"
+                placeholder="Your comments.."
+              ></textarea>
+              <button
+                type="submit"
+                class="location__btn button"
+                name="subscribe-btn"
+              >
+                submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-		<!------------------- services --------------------->
-		<section class="services">
-			<div class="wrapper">
-				<h2 class="services__title">Our Services</h2>
-				<div class="services__block">
-					<div class="services__proff">
-						<a href="#" class="services__link"><img src="img/serv-icon-1.svg" alt="img" class="services__icon">
-							<h3 class="services__name">Engine Repairs</h3>
-							<p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</a>
-					</div>
-					<div class="services__proff">
-						<a href="#" class="services__link"><img src="img/serv-icon-2.svg" alt="img" class="services__icon">
-							<h3 class="services__name">Electrical</h3>
-							<p class="services__text">Donec malesuada, purus a viverra sodales leo purus lobortis</p>
-						</a>
-					</div>
-					<div class="services__proff">
-						<a href="#" class="services__link"><img src="img/serv-icon-3.svg" alt="img" class="services__icon">
-							<h3 class="services__name">Plumbing</h3>
-							<p class="services__text">Praesent dignissim mattis mauris. Sed finibus elementu.</p>
-						</a>
-					</div>
-					<div class="services__proff">
-						<a href="#" class="services__link"><img src="img/serv-icon-4.svg" alt="img" class="services__icon">
-							<h3 class="services__name">Repair House</h3>
-							<p class="services__text">Phasellus venenatis mauris eget isque tincidunt</p>
-						</a>
-					</div>
-				</div>
-				<a href="#" class="services__btn">View All Services</a>
-			</div>
-		</section>
+      <!--------------------- stamp ---------------------->
+      <section class="stamp">
+        <div class="wrapper">
+          <img src="img/stamp-img-1.svg" alt="img" class="stamp__img" />
+          <img src="img/stamp-img-2.svg" alt="img" class="stamp__img" />
+          <img src="img/stamp-img-3.svg" alt="img" class="stamp__img" />
+          <img src="img/stamp-img-4.svg" alt="img" class="stamp__img" />
+        </div>
+      </section>
+    </main>
 
-		<!------------------- project ---------------------->
-		<section class="project">
-			<div class="wrapper">
-				<h2 class="project__title">our projects</h2>
-				<ul class="project__list">
-					<li><a href="#" class="project__link">all</a></li>
-					<li><a href="#" class="project__link">Engine Repair</a></li>
-					<li><a href="#" class="project__link">Electrical</a></li>
-					<li><a href="#" class="project__link">Plumbing</a></li>
-					<li><a href="#" class="project__link">Repair House</a></li>
-					<li><a href="#" class="project__link">Wall Paint</a></li>
-				</ul>
-				<div class="project__cards">
-					<div class="project__picture project__picture-1">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">Wall Paint</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="project__picture project__picture-2">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">Electrical</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="project__picture project__picture-3">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">Engine Repair</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="project__picture project__picture-4">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">Plumbing</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="project__picture project__picture-5">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">Repair House</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="project__picture project__picture-6">
-						<div class="project__overlay">
-							<h3 class="project__name">Find out more in this catalog.</h3>
-							<p class="project__subname">All Projects</p>
-							<div class="project__search">
-								<a href="#"><i class="fas fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a href="#" class="project__btn">All projects</a>
-			</div>
-		</section>
+    <!-------------------- footer ------------------------>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__contacts">
+          <h2 class="footer__title">Contact Us</h2>
+          <ul class="footer__list-contact">
+            <div class="footer__info-phone">
+              <li class="footer__contact-info">
+                <i class="fas fa-mobile-alt"></i>
+              </li>
+              <li>
+                <span>+1 23 567 8596</span><br />
+                Support 24/7 Weekdays
+              </li>
+            </div>
 
-		<!------------------ anyproblem -------------------->
-		<section class="anyproblem">
-			<div class="wrapper">
-				<h2 class="anyproblem__title">You have some problems
-					in housing?</h2>
-				<div class="anyproblem__btn">
-					<a href="tel:+7 (999) 99-99-99"><i class="fas fa-mobile-alt"></i>+7 (999)99-99-99</a>
-				</div>
-			</div>
-		</section>
-
-		<!------------------- location --------------------->
-		<section class="location">
-			<div class="wrapper location__wrapper">
-				<div class="location__map">
-					<h2 class="location__title">Our Location</h2>
-					<div class="location__place">
-						<script type="text/javascript" charset="utf-8" async
-							src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7883c895a9addd4368ce30ee79b1fb2b7c50783a82881564d5ce928ebf43958e&amp;width=100%25&amp;height=340&amp;lang=ru_RU&amp;scroll=true"></script>
-					</div>
-				</div>
-				<div class="location__quote">
-					<h2 class="location__title">Get A Quote</h2>
-					<form action="#" id="form" class="location__form">
-						<input type="text" name="name" class="location__input input" placeholder="Your Name" required>
-						<input type="text" name="login" class="location__input input" placeholder="Your login" required>
-						<input type="email" name="email" class="location__input input" placeholder="Your Email" required>
-						<input type="number" name="password" class="location__input input" placeholder="Your Password" required>
-						<textarea name="comment" id="" cols="30" rows="10" class="location__area"
-							placeholder="Your comments.."></textarea>
-						<button type="submit" class="location__btn button" name="subscribe-btn">submit</button>
-					</form>
-				</div>
-			</div>
-		</section>
-
-		<!--------------------- stamp ---------------------->
-		<section class="stamp">
-			<div class="wrapper">
-				<img src="img/stamp-img-1.svg" alt="img" class="stamp__img">
-				<img src="img/stamp-img-2.svg" alt="img" class="stamp__img">
-				<img src="img/stamp-img-3.svg" alt="img" class="stamp__img">
-				<img src="img/stamp-img-4.svg" alt="img" class="stamp__img">
-			</div>
-		</section>
-	</main>
-
-	<!-------------------- footer ------------------------>
-	<footer class="footer">
-		<div class="wrapper">
-			<div class="footer__contacts">
-				<h2 class="footer__title">Contact Us</h2>
-				<ul class="footer__list-contact">
-					<div class="footer__info-phone">
-						<li class="footer__contact-info"><i class="fas fa-mobile-alt"></i></li>
-						<li><span>+1 23 567 8596</span><br>
-							Support 24/7 Weekdays</li>
-					</div>
-
-					<li class="footer__contact-info"><i class="fas fa-map-marker-alt footer__icon"></i>Auhandy Tower, NY
-						10013, USA</li>
-					<li class="footer__contact-info"><i class="far fa-envelope"></i>info@example.com</li>
-					<li class="footer__contact-info"><i class="far fa-clock"></i>Weekdays: 09:00am - 06:00pm</li>
-				</ul>
-			</div>
-			<div class="footer__services">
-				<h2 class="footer__title">Our Services</h2>
-				<div class="footer__lists">
-					<ul class="footer__list-services">
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Electrical</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Plumbing</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Engine Repair</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Repair House</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Home Maintenance</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Wall Paint</a></li>
-					</ul>
-					<ul class="footer__list-services">
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Installation</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Garden Repairs</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Soil Drilling</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Support 24/7</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Inspection House</a></li>
-						<li class="footer__link"><a href="#"><i class="fas fa-angle-right"></i>Remodeling Ceiling</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer__coupon">
-				<p class="footer__number">get <span>25%</span> off</p>
-				<p class="footer__subnumber">Electrical Services</p>
-				<p class="footer__code">Redeem Code: <span>HANDYHPY28</span></p>
-			</div>
-		</div>
-	</footer>
-	<p class="footer__copyright">Copyright © 2018<span> Handyman.</span> Get The Theme</p>
-	<script src="js/script.js"></script>
-</body>
-
+            <li class="footer__contact-info">
+              <i class="fas fa-map-marker-alt footer__icon"></i>Auhandy Tower,
+              NY 10013, USA
+            </li>
+            <li class="footer__contact-info">
+              <i class="far fa-envelope"></i>info@example.com
+            </li>
+            <li class="footer__contact-info">
+              <i class="far fa-clock"></i>Weekdays: 09:00am - 06:00pm
+            </li>
+          </ul>
+        </div>
+        <div class="footer__services">
+          <h2 class="footer__title">Our Services</h2>
+          <div class="footer__lists">
+            <ul class="footer__list-services">
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Electrical</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Plumbing</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Engine Repair</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Repair House</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"
+                  ><i class="fas fa-angle-right"></i>Home Maintenance</a
+                >
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Wall Paint</a>
+              </li>
+            </ul>
+            <ul class="footer__list-services">
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Installation</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Garden Repairs</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Soil Drilling</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"><i class="fas fa-angle-right"></i>Support 24/7</a>
+              </li>
+              <li class="footer__link">
+                <a href="#"
+                  ><i class="fas fa-angle-right"></i>Inspection House</a
+                >
+              </li>
+              <li class="footer__link">
+                <a href="#"
+                  ><i class="fas fa-angle-right"></i>Remodeling Ceiling</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__coupon">
+          <p class="footer__number">get <span>25%</span> off</p>
+          <p class="footer__subnumber">Electrical Services</p>
+          <p class="footer__code">Redeem Code: <span>HANDYHPY28</span></p>
+        </div>
+      </div>
+    </footer>
+    <p class="footer__copyright">
+      Copyright © 2018<span> Handyman.</span> Get The Theme
+    </p>
+    <script src="js/script.js"></script>
+  </body>
 </html>
