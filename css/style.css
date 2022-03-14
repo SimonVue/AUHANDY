@@ -1235,14 +1235,14 @@ body {
   height: 3.125rem;
   color: #ffffff;
   margin: 0 auto;
-  background: #FFB619;
-  border: 2px solid #FFB619;
   text-transform: uppercase;
   padding: 0.8125rem 0;
   text-decoration: none;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+  background: #FFB619;
+  border: 2px solid #FFB619;
 }
 
 .project .project__btn:hover {
