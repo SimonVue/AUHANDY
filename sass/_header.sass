@@ -53,13 +53,12 @@
             display: block
             width: 100%
             height: rem(2);
-
             background: $orangeColor
             position: absolute
             bottom: 0
             left: -100%
             @media(max-width: rem(686))
-              width: calc(100% - 50% )
+              width: calc(100% - 80% )
 
           &:hover
             color: $orangeColor
@@ -78,6 +77,10 @@
 
         &_item:last-child
           margin-left: rem(25)
+          &::after
+            display: none
+          @media (max-width: rem(686))
+            display: none
 
         @media (max-width: rem(905))
           top: 0

@@ -132,7 +132,7 @@
 
 @media (max-width: 42.875rem) {
   .header .wrapper .nav__menu_item::after {
-    width: calc(100% - 50%);
+    width: calc(100% - 80%);
   }
 }
 
@@ -163,6 +163,16 @@
 
 .header .wrapper .nav__menu_item:last-child {
   margin-left: 1.5625rem;
+}
+
+.header .wrapper .nav__menu_item:last-child::after {
+  display: none;
+}
+
+@media (max-width: 42.875rem) {
+  .header .wrapper .nav__menu_item:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 56.5625rem) {
@@ -249,13 +259,13 @@
   padding: 7.375rem 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 45rem) {
   .promo {
     padding: 3.6875rem 0;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .promo {
     padding: 2.4375rem 0;
   }
@@ -510,7 +520,7 @@
 }
 
 .skill .skill__sup-wrapper {
-  max-width: 1170px;
+  max-width: 73.125rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1531,42 +1541,12 @@
   height: auto;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.content {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-._lock {
-  overflow: hidden;
-}
-
 .footer {
   background: #1A1A1A;
   padding-top: 3.5625rem;
 }
 
 .footer .wrapper {
-  max-width: 73.125rem;
-  margin: 0 auto;
-  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1574,6 +1554,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 0.625rem;
+  max-width: 73.125rem;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 @media (max-width: 64.1875rem) {
@@ -1774,5 +1757,32 @@ body {
 
 .footer__copyright span {
   color: #FFB619;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+._lock {
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
