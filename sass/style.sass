@@ -7,6 +7,7 @@
 @import services
 @import project
 @import anyproblem
+@import location
 
 *
 	box-sizing: border-box
@@ -40,120 +41,6 @@ body
 // ======================= Anypromlem =========================
 
 // ======================= Location ===========================
-.location
-	background: url('../img/skill-bg.jpeg')center / cover no-repeat
-
-	.wrapper
-		@include wrapPosition
-		display: flex
-		justify-content: flex-start
-		padding: rem(80) rem(15)
-		gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
-		@media(max-width: rem(767))
-			flex-direction: column-reverse
-			max-width: 100%
-			margin: 0 auto
-		@media(max-width: rem(427))
-			padding: rem(40) rem(15)
-
-	&__title
-		position: relative
-		font-weight: 900
-		font-size: rem(30)
-		text-transform: uppercase
-		margin: 0 0 rem(55) 0
-		color: $blackColor
-		&::after
-			position: absolute
-			content: ""
-			top: 40px
-			left: 0
-			display: block
-			width: rem(60)
-			border-bottom: 3px solid $blueColor
-			margin-bottom: rem(42)
-		@media(max-width: rem(767))
-			text-align: center
-			display: inline-block
-			font-size: rem(24)
-
-	&__place
-		width: 100%
-		width: rem(482)
-		height: auto
-		box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
-		overflow: hidden
-
-		@media(max-width: rem(1025))
-			width: calc(250px + (450 - 250) * ((100vw - 320px) / (1170 - 320)))
-		@media(max-width: rem(767))
-			width: 100%
-
-	&__form
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-		row-gap: rem(10)
-		@media(max-width: rem(767))
-			gap: 10px
-			justify-content: space-between
-		@media(max-width: rem(460))
-			flex-direction: column
-			gap: rem(15)
-
-	&__input
-		max-width: rem(302)
-		width: 49%
-		height: rem(50)
-		padding: 0 rem(22)
-		border: none
-		outline: none
-		color: $darkGreyColor
-		&:hover
-			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
-
-		&:valid
-			border-radius: 3px
-		@media(max-width: rem(767))
-			max-width: 48%
-		@media(max-width: rem(460))
-			max-width: 100%
-			width: 100%
-			margin: 0 auto
-
-	&__area
-		width: 100%
-		height: rem(127)
-		margin-bottom: rem(35)
-		padding: rem(13) rem(22)
-		border: none
-		outline: none
-		font-family: 'Lato', sans-serif
-		font-size: rem(16)
-		color: $darkGreyColor
-		&:hover
-			box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
-
-		@media(max-width: rem(767))
-			margin-bottom: rem(15)
-
-	&__btn
-		width: rem(131)
-		height: rem(50)
-		color: $whiteColor
-		font-weight: bold
-		text-transform: uppercase
-		padding: rem(13) 0
-		text-decoration: none
-		cursor: pointer
-		transition: .2s
-		@include backgroundBorder
-		@media(max-width: rem(767))
-			margin-bottom: rem(60)
-
-		&:hover
-			background: none
-			@include colorBorder
 
 // ======================== Stamp =============================
 .stamp
