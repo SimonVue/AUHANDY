@@ -2,41 +2,31 @@
   position: relative
   padding-top: 0
 
-  .skill__sup-wrapper
+  &__sup-info
 
+    background: url('../img/skill-bg.jpeg')center / cover no-repeat
+
+  .skill__sup-wrapper
+    max-width: 1170px
+    margin: 0 auto
     display: flex
     justify-content: space-between
+    @include wrapPosition
     padding: rem(50) rem(15)
-    background: url('../img/skill-bg.jpeg')center / cover no-repeat
     align-items: center
+    height: auto
+    @media(max-width: rem(1170))
+      justify-content: space-around
     @media(max-width: rem(720))
       padding: rem(26) rem(15)
     @media(max-width: rem(535))
       flex-direction: column
-
-    &__sup-info
-      height: rem(100)
-      @include wrapPosition
-
-    // .skill__bg
-    //   position: absolute
-    //   top: 0
-    //   left: 0
-    //   width: 100%
-    //   height: rem(150)
-    //   background: url('../img/skill-bg.jpeg')center / cover no-repeat
-    //   z-index: -1
-    //   @media(max-width: rem(720))
-    //     height: rem(100)
-    //   @media(max-width: rem(535))
-    //     height: rem(140)
 
     .skill__sup-text
       font-weight: bold
       font-size: rem(24)
       line-height: rem(22)
       color: $blackColor
-      margin-right: auto
       @media(max-width: rem(720))
         font-size: rem(14)
       @media(max-width: rem(535))
