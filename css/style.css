@@ -161,28 +161,6 @@
   }
 }
 
-.header .wrapper .nav__menu_item:last-child {
-  margin-left: 1.5625rem;
-  padding-left: 2px;
-}
-
-.header .wrapper .nav__menu_item:last-child::after {
-  display: none;
-}
-
-@media (max-width: 42.875rem) {
-  .header .wrapper .nav__menu_item:last-child {
-    display: none;
-  }
-}
-
-@media (max-width: 56.5625rem) {
-  .header .wrapper .nav__menu {
-    top: 0;
-    right: -100%;
-  }
-}
-
 .header .wrapper .nav ._open {
   right: 0;
 }
