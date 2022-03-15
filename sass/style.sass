@@ -8,6 +8,7 @@
 @import project
 @import anyproblem
 @import location
+@import stamp
 
 *
 	box-sizing: border-box
@@ -43,20 +44,6 @@ body
 // ======================= Location ===========================
 
 // ======================== Stamp =============================
-.stamp
-	padding: rem(55) 0
-	@media(max-width: rem(427))
-		padding: rem(30)
-
-	.wrapper
-		@include wrapPosition
-		display: flex
-		justify-content: space-around
-		gap: rem(10)
-
-		img
-			width: calc(60px + (110 - 60) * ((100vw - 320px) / (1170 - 320)))
-			height: auto
 
 // ======================= Footer =============================
 .footer

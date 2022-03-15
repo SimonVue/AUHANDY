@@ -1,0 +1,14 @@
+.stamp
+  padding: rem(55) 0
+  @media(max-width: rem(427))
+    padding: rem(30)
+
+  .wrapper
+    display: flex
+    justify-content: space-around
+    gap: rem(10)
+    @include wrapPosition
+
+    img
+      width: calc(50px + (110 - 50) * ((100vw - 320px) / (1170 - 320)))
+      height: auto
