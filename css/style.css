@@ -163,6 +163,7 @@
 
 .header .wrapper .nav__menu_item:last-child {
   margin-left: 1.5625rem;
+  padding-left: 2px;
 }
 
 .header .wrapper .nav__menu_item:last-child::after {
