@@ -64,15 +64,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.625rem 0;
+  padding: 0.3125rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.header .wrapper .nav .logo {
+  width: 80%;
+}
+
 @media (max-width: 42.875rem) {
   .header .wrapper .nav .logo {
-    width: 90%;
     vertical-align: bottom;
   }
 }
@@ -98,8 +101,7 @@
     transition: .2s;
     position: fixed;
     top: 0;
-    right: 0;
-    overflow: auto;
+    right: -100%;
     z-index: 1;
   }
 }
@@ -162,7 +164,7 @@
   }
 }
 
-._open {
+.header .wrapper .nav ._open {
   right: 0;
 }
 

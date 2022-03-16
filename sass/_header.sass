@@ -9,12 +9,12 @@
       position: relative
       display: flex
       justify-content: space-between
-      padding: rem(10) 0
+      padding: rem(5) 0
       align-items: center
 
       .logo
+        width: 80%
         @media ( max-width:  rem(686))
-          width: 90%
           vertical-align: bottom
 
       &__menu
@@ -31,8 +31,8 @@
           transition: .2s
           position: fixed
           top: 0
-          right: 0
-          overflow: auto
+          right: -100%
+          //overflow: auto
           z-index: 1
 
         &_item
@@ -75,8 +75,8 @@
             line-height: rem(45)
             margin: 0
 
-._open
-  right: 0
+      ._open
+        right: 0
 
 ._header-fixed
   position: fixed
