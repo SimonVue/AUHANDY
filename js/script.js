@@ -1,6 +1,17 @@
 'use strict'
 
-/* ========================= popup ========================= */
+/* ======================= show-header ====================== */
+window.onscroll = function showHeader() {
+
+  const header = document.querySelector('.header');
+  if (window.pageYOffset > 200) {
+    header.classList.add('_header-fixed');
+  } else {
+    header.classList.remove('_header-fixed');
+  }
+}
+
+/* ================================ popup ================================ */
 const modal = document.getElementById('form');
 const btn = document.getElementById('learn');
 const span = document.getElementsByClassName('form-close')[0];
@@ -13,7 +24,7 @@ span.onclick = function () {
   modal.style.display = "none";
 }
 
-/* ========================= Burger ======================== */
+/* ================================= Burger =============================== */
 document.querySelector('.menu-burger').onclick = function () {
   open()
 };
@@ -63,7 +74,7 @@ validation();
 
 
 
-/* ========================= validation location form ======================== */
+/* ======================= validation location form ====================== */
 function locationValidation() {
   const locationElem = document.querySelector('.location__form');
   console.log(locationElem);
