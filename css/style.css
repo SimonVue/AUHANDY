@@ -1,6 +1,6 @@
 .supheader {
   background: #F2F2F2;
-  padding: 0.875rem 0;
+  padding: 0.5rem 0;
   margin: 0 auto;
 }
 
@@ -342,6 +342,13 @@
   line-height: 3.125rem;
   letter-spacing: 2px;
   margin: 0 0 1.25rem 0;
+  -webkit-transform: translate(0, 120%);
+      -ms-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @media (max-width: 64.375rem) {
@@ -1801,5 +1808,12 @@ body {
 
 ._lock {
   overflow: hidden;
+}
+
+._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
