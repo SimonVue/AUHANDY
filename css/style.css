@@ -64,7 +64,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.3125rem 0;
+  padding: 0.625rem 0 0.3125rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,6 +76,7 @@
 
 @media (max-width: 42.875rem) {
   .header .wrapper .nav .logo {
+    width: 60%;
     vertical-align: bottom;
   }
 }
@@ -112,7 +113,7 @@
   text-decoration: none;
   margin-left: 2.5rem;
   color: #333333;
-  padding-bottom: 0.1875rem;
+  padding-bottom: 0.625rem;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -135,7 +136,7 @@
 
 @media (max-width: 42.875rem) {
   .header .wrapper .nav__menu_item::after {
-    width: calc(100% - 80%);
+    width: calc(100% - 70%);
   }
 }
 
