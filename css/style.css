@@ -711,6 +711,12 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 37%;
           flex: 0 0 37%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @media (max-width: 45rem) {
@@ -889,6 +895,12 @@
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
+}
+
+.skill .skill__info._active .skill__img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .services {
