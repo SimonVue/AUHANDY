@@ -1611,7 +1611,7 @@
 
 @media (max-width: 26.6875rem) {
   .stamp {
-    padding: 1.875rem;
+    padding: 1.875rem 0;
   }
 }
 
@@ -1630,6 +1630,27 @@
 .stamp .wrapper img {
   width: calc(50px + (110 - 50) * ((100vw - 320px) / (1170 - 320)));
   height: auto;
+}
+
+.stamp .anim-stamp {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.stamp .anim-stamp._active .stamp__img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.stamp ._active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .footer {
