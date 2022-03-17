@@ -130,6 +130,10 @@
     justify-content: space-between
     width: 50%
     padding-top: 0
+    opacity: 0
+    transform: translate(0, 120%)
+    transition: all 0.8s ease 0s;
+
     @media(max-width: rem(720))
       padding-top: rem(20)
     @media(max-width: rem(470))
@@ -164,3 +168,7 @@
     font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (1170 - 320)))
     line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)))
     color: $darkGreyColor
+
+  ._active
+  	transform: translate(0, 0)
+  	opacity: 1

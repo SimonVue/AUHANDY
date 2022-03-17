@@ -16,24 +16,29 @@ if (animItems.length > 0) {
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
 
       if (animItemHeight > window.innerHeight) {
-        animItemPoint = window.innerHeight - innerHeight / animStart;
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
 
       if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add('_active');
       } else {
-        animItem.classList.remove('_active');
+        if (!animItem.classList.contains('_anim-no-hide')) {
+          animItem.classList.remove('_active');
+        }
       }
     }
   }
   function offset(el) {
     const rect = el.getBoundingClientRect(),
-      scrollLeft = window.scrollY || document.documentElement.scrollLeft,
+      scrollLeft = window.scrollX || document.documentElement.scrollLeft,
       scrollТop = window.scrollY || document.documentElement.scrollТop;
     return { top: rect.top + scrollТop, left: rect.left + scrollLeft }
   };
+
   animOnScroll();
+
 }
+
 
 
 /* ======================= show-header ====================== */

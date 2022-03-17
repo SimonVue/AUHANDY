@@ -324,6 +324,33 @@
 .promo__img {
   width: 40%;
   height: 100%;
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-animation: ani 1s forwards;
+          animation: ani 1s forwards;
+}
+
+@-webkit-keyframes ani {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes ani {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .promo .promo__block {
@@ -368,6 +395,13 @@
   line-height: 1.75rem;
   color: #cccc;
   margin: 0 0 2.5rem 0;
+  -webkit-transform: translate(0, 120%);
+      -ms-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
 }
 
 .promo__btn {
@@ -531,6 +565,13 @@
 .error {
   outline: 2px solid #f5a783 !important;
   border-radius: 0.1875rem;
+}
+
+._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .skill {
@@ -776,6 +817,13 @@
           justify-content: space-between;
   width: 50%;
   padding-top: 0;
+  opacity: 0;
+  -webkit-transform: translate(0, 120%);
+      -ms-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @media (max-width: 45rem) {
@@ -834,6 +882,13 @@
   font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (1170 - 320)));
   line-height: calc(12px + (20 - 12) * ((100vw - 320px) / (1170 - 320)));
   color: #666666;
+}
+
+.skill ._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .services {

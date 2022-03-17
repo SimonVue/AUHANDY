@@ -25,6 +25,13 @@
   &__img
     width: 40%
     height: 100%
+    transform: translateX(-150%);
+    animation: ani 1s forwards;
+    @keyframes ani
+      0%
+        transform: translateX(-150%)
+      100%
+        transform: translateY(0)
 
   .promo__block
     color: $whiteColor
@@ -34,12 +41,13 @@
   &__title
     font-weight: bold
     font-size: rem(39)
-    line-height: rem(50);
+    line-height: rem(50)
     letter-spacing: 2px
     margin: 0 0 rem(20) 0
     transform: translate(0, 120%)
     opacity: 0
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s
+
     @media(max-width: rem(1030))
       font-size: rem(35)
       @media(max-width: rem(430))
@@ -50,6 +58,9 @@
     line-height: rem(28)
     color: $mainColor
     margin: 0 0 rem(40) 0
+    transform: translate(0, 120%)
+    opacity: 0
+    transition: all 0.8s ease 0.4s
 
   &__btn
     display: inline-block
@@ -157,3 +168,7 @@
 .error
   outline: 2px solid #f5a783 !important
   border-radius: rem(3)
+
+._active
+  transform: translate(0, 0)
+  opacity: 1
