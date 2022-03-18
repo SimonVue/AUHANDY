@@ -59,6 +59,66 @@
     @media(max-width: rem(424))
       width: rem(220)
 
+  .proof-left
+    overflow: hidden
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0s
+
+  .proof-left._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-left-1
+    overflow: hidden
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0.3s
+
+  .proof-left-1._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-right
+    overflow: hidden
+    opacity: 0
+    transform: translate(50%)
+    transition: all 0.8s ease 0s
+
+  .proof-right._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-right-1
+    overflow: hidden
+    opacity: 0
+    transform: translate(50%)
+    transition: all 0.8s ease 0.3s
+
+  .proof-right-1._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-down
+    overflow: hidden
+    opacity: 0
+    transform: translate(0, 120%)
+    transition: all 0.8s ease 0s
+
+  .proof-down._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-up
+    overflow: hidden
+    opacity: 0
+    transform: translate(0, -120%)
+    transition: all 0.8s ease 0s
+
+  .proof-up._active
+    transform: translate(0, 0)
+    opacity: 1
+
   &__link
     text-decoration: none
 
