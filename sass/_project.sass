@@ -57,16 +57,65 @@
 
   .project__picture-1
     background: url('../img/project_jmg-1.jpeg')center / cover no-repeat
+    overflow: hidden
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0s
+
+  .project__cards._active .project__picture-1
+    transform: translate(0, 0)
+    opacity: 1
+
   .project__picture-2
     background: url('../img/project_jmg-2.jpeg')center / cover no-repeat
+    overflow: hidden
+    transform: scale(0)
+    transition: all 0.8s ease 0s
+
+  .project__cards._active .project__picture-2
+    transform: scale(1)
+
   .project__picture-3
     background: url('../img/project_jmg-3.jpeg')center / cover no-repeat
+    overflow: hidden
+    opacity: 0
+    transform: translate(50%)
+    transition: all 0.8s ease 0s
+
+  .project__cards._active .project__picture-3
+    transform: translate(0, 0)
+    opacity: 1
+
   .project__picture-4
     background: url('../img/project_jmg-4.jpeg')center / cover no-repeat
+    overflow: hidden
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0.5s
+
+  .project__cards._active .project__picture-4
+    transform: translate(0, 0)
+    opacity: 1
+
   .project__picture-5
     background: url('../img/project_jmg-5.jpeg')center / cover no-repeat
+    overflow: hidden
+    transform: scale(0)
+    transition: all 0.8s ease 0.5s
+
+  .project__cards._active .project__picture-5
+    transform: scale(1)
+
   .project__picture-6
     background: url('../img/project_jmg-6.jpeg')center / cover no-repeat
+    overflow: hidden
+    opacity: 0
+    transform: translate(50%)
+    transition: all 0.8s ease 0.5s
+
+  .project__cards._active .project__picture-6
+    transform: translate(0, 0)
+    opacity: 1
 
   .project__picture
     position: relative
