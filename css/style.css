@@ -1407,6 +1407,24 @@
   margin-right: 0.625rem;
 }
 
+.anyproblem .anim-info {
+  width: 25rem;
+  -webkit-transform: translate(220%);
+      -ms-transform: translate(220%);
+          transform: translate(220%);
+  opacity: 0;
+  -webkit-transition: all 1.5s ease 0.4s;
+  -o-transition: all 1.5s ease 0.4s;
+  transition: all 1.5s ease 0.4s;
+}
+
+.anyproblem ._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
 .location {
   background: url("../img/skill-bg.jpeg") center/cover no-repeat;
 }
