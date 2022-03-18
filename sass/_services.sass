@@ -1,0 +1,159 @@
+.services
+  background: url(../img/bg-service.jpeg)
+  padding: rem(80) 0 rem(100)
+  @media(max-width: rem(767))
+    padding: rem(50) 0 rem(70)
+
+  .wrapper
+    @include wrapPosition
+		text-align: center
+		margin: 0 auto
+		color: #fff
+
+  &__title
+    font-weight: 900
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1170 - 320)))
+    text-transform: uppercase
+    margin: 0
+    &::after
+      content: ""
+      display: block
+      margin: 0 auto
+      width: rem(60)
+      padding-top: rem(20)
+      border-bottom: 3px solid $orangeColor
+      margin-bottom: rem(64)
+
+      @media(max-width: rem(590))
+        margin: 0 auto
+
+  &__block
+    display: flex
+    justify-content: space-between
+    @media(max-width: rem(590))
+      justify-content: center
+      flex-wrap: wrap
+      gap: rem(20)
+
+      padding: rem(50) 0
+
+    @media(max-width: rem(424))
+      justify-content: center
+
+  &__proff
+    width: 24%
+    height: auto
+    background: none
+    border: 4px solid $blueColor
+    padding: rem(49) rem(19) 0
+    padding-bottom: calc(20px + (52 - 20) * ((100vw - 320px) / (1170 - 320)))
+    margin-bottom: rem(65)
+    transition: .2s
+    &:hover
+      background: $blueColor
+    @media(max-width: rem(769))
+      padding: rem(30) rem(10)
+    @media(max-width: rem(590))
+      width: 40%
+      margin: 0
+    @media(max-width: rem(424))
+      width: rem(220)
+
+  .proof-left
+    overflow: hidden
+    opacity: 0
+    transform: translate(-30%)
+    transition: all 0.8s ease 0s
+
+  .proof-left._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-left-1
+    overflow: hidden
+    opacity: 0
+    transform: translate(-30%)
+    transition: all 0.8s ease 0.3s
+
+  .proof-left-1._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-right
+    overflow: hidden
+    opacity: 0
+    transform: translate(30%)
+    transition: all 0.8s ease 0s
+
+  .proof-right._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-right-1
+    overflow: hidden
+    opacity: 0
+    transform: translate(6%)
+    transition: all 0.8s ease 0.3s
+
+  .proof-right-1._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-down
+    overflow: hidden
+    opacity: 0
+    transform: translate(0, 120%)
+    transition: all 0.8s ease 0s
+
+  .proof-down._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  .proof-up
+    overflow: hidden
+    opacity: 0
+    transform: translate(0, -120%)
+    transition: all 0.8s ease 0s
+
+  .proof-up._active
+    transform: translate(0, 0)
+    opacity: 1
+
+  &__link
+    text-decoration: none
+
+  &__icon
+    width: calc(20px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
+    height: rem(58)
+    margin-bottom: rem(27)
+    @media(max-width: rem(769))
+      margin-bottom: rem(13)
+
+    @media(max-width: rem(424))
+      width: calc(40px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
+
+  &__name
+    font-weight: bold
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
+    margin: 0
+    margin-bottom: rem(13)
+    color: $whiteColor
+
+  &__text
+    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1170 - 320)))
+    line-height: calc(18px + (24 - 18) * ((100vw - 320px) / (1170 - 320)))
+    color: $mainColor
+
+  &__btn
+    display: inline-block
+    color: $whiteColor
+    margin: 0 auto
+    text-transform: uppercase
+    padding: rem(16) rem(35)
+    text-decoration: none
+    transition: .2s
+    @include backgroundBorder
+
+    &:hover
+      background: none
+      border: 2px solid $orangeColor

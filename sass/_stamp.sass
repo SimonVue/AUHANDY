@@ -1,0 +1,25 @@
+.stamp
+  padding: rem(55) 0
+
+  @media(max-width: rem(427))
+    padding: rem(30) 0
+
+  .wrapper
+    display: flex
+    justify-content: space-around
+    gap: rem(10)
+    @include wrapPosition
+
+    img
+      width: calc(50px + (110 - 50) * ((100vw - 320px) / (1170 - 320)))
+      height: auto
+
+  .anim-stamp
+    transform: scale(0)
+    transition: all 0.8s ease 0s
+
+  .anim-stamp._active .stamp__img
+    transform: scale(1)
+
+  ._active
+    transform: scale(1)

@@ -1,0 +1,159 @@
+.location
+  background: url('../img/skill-bg.jpeg')center / cover no-repeat
+
+  .wrapper
+    display: flex
+    justify-content: flex-start
+    max-width: rem(1170)
+    margin: 0 auto
+    padding: rem(80) rem(15)
+    gap: calc(5px + (50 - 20) * ((100vw - 320px) / (1170 - 320)))
+    @media(max-width: rem(767))
+      flex-direction: column-reverse
+      max-width: 100%
+      margin: 0 auto
+    @media(max-width: rem(427))
+      padding: rem(40) rem(15)
+
+  &__title
+    position: relative
+    font-weight: 900
+    font-size: rem(30)
+    text-transform: uppercase
+    margin-bottom: rem(55)
+    color: $blackColor
+    &::after
+      position: absolute
+      content: ""
+      top: rem(40)
+      left: 0
+      display: block
+      width: rem(60)
+      border-bottom: 3px solid $blueColor
+      margin-bottom: rem(42)
+      @media(max-width: rem(767))
+        font-size: rem(24)
+
+  .title-left
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0.4s
+    @media(max-width: rem(767))
+      display: block
+      width: 230px;
+      margin: 0 auto 55px;
+      text-align: center
+
+  .location__map._active .title-left
+    transform: translate(0, 0)
+    opacity: 1
+
+  .title-right
+    display: inline-block
+    text-align: start
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0s
+    @media(max-width: rem(767))
+      display: block
+      width: 200px;
+      margin: 0 auto 55px;
+      text-align: center
+
+  .location__quote._active .title-right
+    transform: translate(0)
+    opacity: 1
+    text-align: center
+
+  &__place
+    width: 100%
+    width: rem(482)
+    height: auto
+    box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+    overflow: hidden
+    opacity: 0
+    transform: translate(-50%)
+    transition: all 0.8s ease 0.8s
+    @media(max-width: rem(1025))
+      width: calc(250px + (450 - 250) * ((100vw - 320px) / (1170 - 320)))
+    @media(max-width: rem(767))
+      margin: 0 auto
+      width: 100%
+
+  .location__map._active .location__place
+    transform: translate(0, 0)
+    opacity: 1
+
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    row-gap: rem(10)
+    overflow: hidden
+    transform: scale(0)
+    transition: all 0.8s ease 0s
+
+    @media(max-width: rem(767))
+      gap: 10px
+      justify-content: space-between
+    @media(max-width: rem(460))
+      flex-direction: column
+      gap: rem(15)
+
+  .location__quote._active .location__form
+    transform: scale(1)
+
+  &__input
+    max-width: rem(302)
+    width: 49%
+    height: rem(50)
+    padding: 0 rem(22)
+    border: none
+    outline: none
+    color: $darkGreyColor
+    &:hover
+      box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+
+    &:valid
+      border-radius: 3px
+    @media(max-width: rem(767))
+      max-width: 48%
+    @media(max-width: rem(460))
+      max-width: 100%
+      width: 100%
+      margin: 0 auto
+
+  &__area
+    width: 100%
+    height: rem(127)
+    margin-bottom: rem(35)
+    padding: rem(13) rem(22)
+    border: none
+    outline: none
+    font-family: 'Lato', sans-serif
+    font-size: rem(16)
+    color: $darkGreyColor
+    &:hover
+      box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+
+    @media(max-width: rem(767))
+      margin-bottom: rem(15)
+
+  &__btn
+    width: rem(131)
+    height: rem(50)
+    color: $whiteColor
+    font-weight: bold
+    text-transform: uppercase
+    padding: rem(13) 0
+    text-decoration: none
+    cursor: pointer
+    transition: .2s
+    @include backgroundBorder
+    @media(max-width: rem(767))
+      margin: 0 auto
+      margin-bottom: rem(60)
+
+    &:hover
+      background: none
+      @include colorBorder

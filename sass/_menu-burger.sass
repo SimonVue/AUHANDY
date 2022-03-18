@@ -1,0 +1,51 @@
+.menu-burger
+  display: none
+
+  @media(max-width: rem(686))
+    display: block
+    position: relative
+    width: rem(30)
+    height: rem(18)
+    cursor: pointer
+    z-index: 1
+
+  span,
+  &::before,
+  &::after
+    left: 0
+    position: absolute
+    height: rem(3);
+
+    width: 100%
+    transition: all 0.3s ease 0s
+    background: $blackColor
+
+  &::before,
+  &::after
+    content: ""
+
+  &::before
+    top: 0
+
+  &::after
+    bottom: 0
+
+  span
+    top: 50%
+    transform: scale(1) translate(0px, -50%)
+
+._close
+
+  span
+    background: #ddd
+    transform: scale(0) translate(0px, -50%)
+
+  &::before
+    background: #ddd
+    top: 50%
+    transform: rotate(-45deg) translate(0px, -50%)
+
+  &::after
+    background: #ddd
+    top: 45%
+    transform: rotate(45deg) translate(0px, 50%)

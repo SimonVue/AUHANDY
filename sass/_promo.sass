@@ -1,0 +1,171 @@
+.promo
+  background: url('../img/bg_img.jpeg')center / cover no-repeat
+  padding: rem(118) 0
+  @media(max-width: rem(720))
+    padding: rem(59) 0
+  @media(max-width: rem(430))
+    padding: rem(39) 0
+
+  .wrapper
+    @include wrapPosition
+
+  .promo__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: rem(50)
+
+    @media(max-width: rem(720))
+      display: block
+      text-align: center
+      width: 90%
+    @media(max-width: rem(430))
+      width: 100%
+
+  &__img
+    width: 40%
+    height: 100%
+    transform: translateX(-150%);
+    animation: que 1s forwards;
+    @keyframes que
+      0%
+        transform: translateX(-150%)
+      100%
+        transform: translateX(0)
+
+  .promo__block
+    color: $whiteColor
+    transform: translateX(150%);
+    animation: ani 1s forwards;
+    @keyframes ani
+      0%
+        transform: translateX(150%)
+      100%
+        transform: translateX(0)
+    @media(max-width: rem(490))
+      margin: 0 auto
+
+  &__title
+    font-weight: bold
+    font-size: rem(39)
+    line-height: rem(50)
+    letter-spacing: 2px
+    margin: 0 0 rem(20) 0
+
+    @media(max-width: rem(1030))
+      font-size: rem(35)
+      @media(max-width: rem(430))
+        font-size: rem(30)
+
+  &__text
+    font-size: rem(18)
+    line-height: rem(28)
+    color: $mainColor
+    margin: 0 0 rem(40) 0
+
+  &__btn
+    display: inline-block
+    width: rem(169)
+    height: rem(50)
+    font-weight: bold
+    text-transform: uppercase
+    color: $whiteColor
+    cursor: pointer
+    transition: .2s
+    &:hover
+      background: $whiteColor
+      color: $orangeColor
+      border: 2px solid $whiteColor
+    @media(max-width: rem(490))
+      display: block
+      margin: 0 auto
+
+  &__btn-learn
+    position: relative
+    background: $orangeColor
+    border: transparent
+    margin-right: rem(15)
+
+    @media(max-width: rem(490))
+      display: block
+      margin: 0 auto
+
+      margin-bottom: rem(15)
+
+    &:hover
+      background: $whiteColor
+      color: $orangeColor
+
+  &__btn-quote
+    background: none
+    border: 2px solid $whiteColor
+
+  .promo__form
+    position: absolute
+    left: 50%
+    top: 60%
+    transform: translate(-50%, -50%)
+    display: none
+    width: rem(370)
+    height: rem(400)
+    border: none
+    box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.30)
+    background: #efefef
+    text-align: center
+    padding-top: rem(50)
+    opacity: 1
+    animation-name: animatetop
+    animation-duration: 0.4s
+    @media(max-width: rem(360))
+      width: 100%
+
+    @keyframes "animatetop" // анимация формы popup
+      from
+        top: 30%
+        opacity: 0
+      to
+        top: 60%
+        opacity: 1
+
+    .form-close
+      position: absolute
+      top: rem(10)
+      right: rem(15)
+      color: #000
+      cursor: pointer
+
+    .form__input
+      width: rem(270)
+      height: rem(50)
+      padding: rem(20)
+      border: none
+      outline: none
+      border-radius: 2px
+      margin-top: rem(15)
+      &:hover
+        box-shadow: 1px 1px 10px 0px rgba(50, 50, 50, 0.30)
+      @media(max-width: rem(360))
+        width: 75%
+
+    .form__btn
+      display: block
+      width: rem(131)
+      height: rem(50)
+      color: $whiteColor
+      font-weight: bold
+      margin: 0 auto
+      margin-top: rem(40)
+      text-transform: uppercase
+      overflow: hidden
+      animation-name: animate
+      animation-duration: 0.3s
+      cursor: pointer
+      transition: .2s
+      @include backgroundBorder
+      &:hover
+        background: none
+        color: $orangeColor
+
+.error
+  outline: 2px solid #f5a783 !important
+  border-radius: rem(3)
