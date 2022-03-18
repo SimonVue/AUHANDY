@@ -14,8 +14,9 @@
       letter-spacing: 1.3px
       text-transform: uppercase
       margin: 0 0 rem(32) 0
-      @media(max-width: rem(377))
+      @media(max-width: rem(767))
         text-align: center
+        margin: 0 auto rem(32)
 
     .anyproblem__btn
       display: inline-block
@@ -28,7 +29,7 @@
         background: none
         @include colorBorder
 
-      @media(max-width: rem(377))
+      @media(max-width: rem(767))
         margin: 0 auto
         display: block
         width: fit-content
@@ -46,11 +47,17 @@
         margin-right: rem(10)
 
   .anim-info
-    width: rem(400)
-    transform: translate(220%)
+    max-width: rem(400)
+    transform: translate(70%)
     opacity: 0
     transition: all 1.5s ease 0.2s
+    @media(max-width: rem(767))
+      @media(max-width: rem(767))
+        margin: 0 auto
+        transform: scale(0)
 
   ._active
     transform: translate(0, 0)
     opacity: 1
+    @media(max-width: rem(767))
+      transform: scale(1)

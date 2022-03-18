@@ -1048,9 +1048,9 @@
 .services .proof-left {
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-30%);
+      -ms-transform: translate(-30%);
+          transform: translate(-30%);
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -1066,9 +1066,9 @@
 .services .proof-left-1 {
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-30%);
+      -ms-transform: translate(-30%);
+          transform: translate(-30%);
   -webkit-transition: all 0.8s ease 0.3s;
   -o-transition: all 0.8s ease 0.3s;
   transition: all 0.8s ease 0.3s;
@@ -1084,9 +1084,9 @@
 .services .proof-right {
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(50%);
-      -ms-transform: translate(50%);
-          transform: translate(50%);
+  -webkit-transform: translate(30%);
+      -ms-transform: translate(30%);
+          transform: translate(30%);
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -1102,9 +1102,9 @@
 .services .proof-right-1 {
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(50%);
-      -ms-transform: translate(50%);
-          transform: translate(50%);
+  -webkit-transform: translate(6%);
+      -ms-transform: translate(6%);
+          transform: translate(6%);
   -webkit-transition: all 0.8s ease 0.3s;
   -o-transition: all 0.8s ease 0.3s;
   transition: all 0.8s ease 0.3s;
@@ -1308,9 +1308,9 @@
   background: url("../img/project_jmg-1.jpeg") center/cover no-repeat;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-7%);
+      -ms-transform: translate(-7%);
+          transform: translate(-7%);
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -1344,9 +1344,9 @@
   background: url("../img/project_jmg-3.jpeg") center/cover no-repeat;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(50%);
-      -ms-transform: translate(50%);
-          transform: translate(50%);
+  -webkit-transform: translate(7%);
+      -ms-transform: translate(7%);
+          transform: translate(7%);
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -1363,9 +1363,9 @@
   background: url("../img/project_jmg-4.jpeg") center/cover no-repeat;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-7%);
+      -ms-transform: translate(-7%);
+          transform: translate(-7%);
   -webkit-transition: all 0.8s ease 0.5s;
   -o-transition: all 0.8s ease 0.5s;
   transition: all 0.8s ease 0.5s;
@@ -1399,9 +1399,9 @@
   background: url("../img/project_jmg-6.jpeg") center/cover no-repeat;
   overflow: hidden;
   opacity: 0;
-  -webkit-transform: translate(50%);
-      -ms-transform: translate(50%);
-          transform: translate(50%);
+  -webkit-transform: translate(7%);
+      -ms-transform: translate(7%);
+          transform: translate(7%);
   -webkit-transition: all 0.8s ease 0.5s;
   -o-transition: all 0.8s ease 0.5s;
   transition: all 0.8s ease 0.5s;
@@ -1586,9 +1586,10 @@
   margin: 0 0 2rem 0;
 }
 
-@media (max-width: 23.5625rem) {
+@media (max-width: 47.9375rem) {
   .anyproblem .wrapper .anyproblem__title {
     text-align: center;
+    margin: 0 auto 2rem;
   }
 }
 
@@ -1609,7 +1610,7 @@
   border: 2px solid #FFB619;
 }
 
-@media (max-width: 23.5625rem) {
+@media (max-width: 47.9375rem) {
   .anyproblem .wrapper .anyproblem__btn {
     margin: 0 auto;
     display: block;
@@ -1636,14 +1637,23 @@
 }
 
 .anyproblem .anim-info {
-  width: 25rem;
-  -webkit-transform: translate(220%);
-      -ms-transform: translate(220%);
-          transform: translate(220%);
+  max-width: 25rem;
+  -webkit-transform: translate(70%);
+      -ms-transform: translate(70%);
+          transform: translate(70%);
   opacity: 0;
   -webkit-transition: all 1.5s ease 0.2s;
   -o-transition: all 1.5s ease 0.2s;
   transition: all 1.5s ease 0.2s;
+}
+
+@media (max-width: 47.9375rem) and (max-width: 47.9375rem) {
+  .anyproblem .anim-info {
+    margin: 0 auto;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
 }
 
 .anyproblem ._active {
@@ -1651,6 +1661,14 @@
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
+}
+
+@media (max-width: 47.9375rem) {
+  .anyproblem ._active {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .location {
@@ -1692,7 +1710,7 @@
   font-weight: 900;
   font-size: 1.875rem;
   text-transform: uppercase;
-  margin: 0 0 3.4375rem 0;
+  margin-bottom: 3.4375rem;
   color: #333333;
 }
 
@@ -1708,11 +1726,64 @@
 }
 
 @media (max-width: 47.9375rem) {
-  .location__title {
-    text-align: center;
-    display: inline-block;
+  .location__title::after {
     font-size: 1.5rem;
   }
+}
+
+.location .title-left {
+  opacity: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
+}
+
+@media (max-width: 47.9375rem) {
+  .location .title-left {
+    display: block;
+    width: 230px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+}
+
+.location .location__map._active .title-left {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.location .title-right {
+  display: inline-block;
+  text-align: start;
+  opacity: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+@media (max-width: 47.9375rem) {
+  .location .title-right {
+    display: block;
+    width: 200px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+}
+
+.location .location__quote._active .title-right {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+  text-align: center;
 }
 
 .location__place {
@@ -1722,6 +1793,13 @@
   -webkit-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
           box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.3);
   overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all 0.8s ease 0.8s;
+  -o-transition: all 0.8s ease 0.8s;
+  transition: all 0.8s ease 0.8s;
 }
 
 @media (max-width: 64.0625rem) {
@@ -1732,8 +1810,16 @@
 
 @media (max-width: 47.9375rem) {
   .location__place {
+    margin: 0 auto;
     width: 100%;
   }
+}
+
+.location .location__map._active .location__place {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .location__form {
@@ -1746,6 +1832,13 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 0.625rem;
+  overflow: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @media (max-width: 47.9375rem) {
@@ -1765,6 +1858,12 @@
             flex-direction: column;
     gap: 0.9375rem;
   }
+}
+
+.location .location__quote._active .location__form {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .location__input {
@@ -1841,6 +1940,7 @@
 
 @media (max-width: 47.9375rem) {
   .location__btn {
+    margin: 0 auto;
     margin-bottom: 3.75rem;
   }
 }
